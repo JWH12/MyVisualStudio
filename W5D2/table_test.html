@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css소스</title>
+
+    <!-- css소스 
+         테이블을 만들 때 사용한다
+         <table> :
+         <tr> : 행을 만든다. 몇 줄인지를 정한다.    
+         <td> : 열을 만든다.
+         colspan = "숫자" : 원하는 열만큼 병합한다   
+         rowspan = "숫자" : 행을 병합하고 원래 있던 값을 옆으로 밀어낸다  
+         <th> : 타이틀 역할을 하는 행을 뜻한다. 자체적으로 굵은 글씨체를 사용한다. 
+         <thead> : 제목이 들어가는 부분을 내용부분과 나눌 때 사용한다.
+         <tbody> : 내용이 들어가는 부분을 제목부분과 나눌 때 사용한다.      
+            
+    -->
+    <style>
+        table, th, td {
+          border:1px solid #ccc;
+          border-collapse: collapse;
+        }
+        th, td { padding:10px 20px; }
+
+</style>
+</head>
+<body>
+    <table>
+        <thead>
+        <tr>
+            <th>a</th>
+            <th>b</th>
+            <th>c</th>
+            <th>d</th>
+            <th>e</th>
+            <th>f</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        <tr> <!-- 첫번째 행 -->
+            <td>1</td> <!-- 첫번째 열 -->
+            <td>2</td>
+            <td>3</td>
+            <td colspan = "3">4</td>
+        </tr>
+
+        <tr> <!-- 두번째 행 -->
+            <td colspan = "2", rowspan = "2">5</td> <!-- 두번째 열 -->
+            <td>6</td>
+            <td>7</td>
+            <td rowspan = "3">8</td>
+            <td>9</td> <!-- 세번째 열 -->
+        </tr>
+
+        <tr> <!-- 세번째 행 -->
+            <td>10</td> <!-- 세번째 열 -->
+            <td>11</td> <!-- 네번째 열 -->
+            <td>12</td>
+        </tr>
+
+        <tr> <!-- 네번째 행 -->
+            <td>13</td><!-- 네번째 열 -->
+            <td>14</td>
+            <td>15</td>
+            <td>16</td>
+            <td>17</td>
+        </tr>
+        </tbody>
+    </table>
+    
+</body>
+</html>

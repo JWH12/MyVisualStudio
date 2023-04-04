@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>첫번째 테스트</title> <!-- 인터넷 창 상단에 제목이다. -->
+</head>
+<body>
+    <!-- 
+         테그 안에는 다른 테그들이 들어 갈 수 있다.
+         띄어쓰기 코드 : &nbsp; 
+         줄바꾸기 코드 : <br>  
+         <pre> </pre> : 띄어쓰기와 줄바꿈을 쉽게 할 수 있는 코드
+         <div> 내용 </div> : <div>하나에 한줄을 범위로 글을 작성하기 때문에 연속으로 사용하면 자동으로 줄바꿈이 된다.
+         <span> 내용 </span> : 텍스트를 입력한 만큼 자리를 차지한다. 
+         여러 테그를 같이 사용하는 경우 줄을 맞추어서 작성해야 한다.
+         <h1> ~ <h3>... : 글자 굵기와 크기를 지정 할 수 있기 때문에 강조하거나 타이틀을 쓸 때 사용한다.
+         <hr> : 글자와 글자 사이에 선을 그을 수 있다.
+         <ul>  <li> 내용 </li>  </ul> : 내용 앞에 조그만 점을 넣어 목록처럼 만든다. 규칙성이 없다.
+         <ol>  <li> 내용 </li>  </ol> : 순서를 정하여 목록을 만들 때 사용한다. 규칙성이 존재한다. 디폴트가 숫자이다.
+         <ol type = "a, 1, i">  <li> 내용 </li>  </ol>  : 목록 순서 표시를 숫자, 알파벳, 로마자로 타입을 지정 할 수 있다.  
+         <ol start = "5"> <li> 내용 </li>  </ol> : 목록 순서 표시를 몇번부터 기록할 지 지정 할 수 있다.
+         <ol type = "a" reversed> : 목록 표시를 역순으로 할 수 있다.
+         <a href = "링크"> 내용 </a> : 내용을 누르면 걸어놓은 링크로 이동하게 할 수 있다.    
+         <a href = "#"> 내용 </a> : 내용이 링크와 연결이 안되었지만 링크인 것을 명시적으로 나타 낼 때 사용한다. 해당 내용을 누르면 제일 상단으로 자동 이동한다.   
+         <a href = "javascript:;"> 내용 </a> : #과 성능은 같지만 화면이동이 안되기 때문에 해당 문구를 더 많이 사용한다.
+
+        -->
+        
+    <div>
+        <h1>
+            <a href = "javascript:;">저녁 구내식당 메뉴.</a>
+
+        </h1>
+        <hr>
+        <ul>
+           <h1>
+              <li>삼겹살</li>
+              <li>김치</li>
+              <li>밥</li>
+           </h1>
+        </ul>
+        
+        <ol>
+            <li>삼겹살</li>
+            <li>김치</li>
+            <li>밥</li>
+        </ol>
+
+        <ol type = "a">
+            <li><a href = "javascript:;">삼겹살</a></li>
+            <li>김치</li>
+            <li>밥</li>
+        </ol>
+
+        <ol type = "i">
+            <li>삼겹살</li>
+            <li>김치</li>
+            <li>밥</li>
+            <li>맥주</li>
+        </ol>
+
+        <ol start = "5">
+            <li>삼겹살</li>
+            <li>김치</li>
+            <li>밥</li>
+            <li>맥주</li>
+        </ol>
+
+        <ol type = "a" reversed>
+            <li>삼겹살</li>
+            <li>김치</li>
+            <li>밥</li>
+        </ol>
+
+        <div>삼겹살</div>
+        <div>김치</div>
+        <div>밥</div>
+        
+        <h2>안녕하세요.</h2>
+        <h3>안녕하세요.</h3>
+        <div>안녕하세요.</div>
+
+        <br>
+        <br>
+        <br>
+        <br>
+    <pre>HTML 첫번 째 문서                   안녕하세요
+    
+            테스트 입니다.</pre>
+
+        <span>테스트 1 
+
+        </span> 
+    </div>
+    <div>테스트 1-1 </div>
+    <span>테스트 2</span>
+    <span>테스트 2-1</span>
+</body>
+</html>
