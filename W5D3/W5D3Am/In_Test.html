@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>전공서적 구매하기</h1>
+    <div id="container">
+    <form action="">
+    <fieldset>
+        <legend>상품선택</legend>
+
+        <b><p>주문할 상품을 선택해 주세요.</p></b>
+
+        <ul>
+            
+            <li><label><label><input type="checkbox" value="s_3"> 자바기초 </label>
+                <label><input type="number" max="5" min="0" value="1">개 (최대 5개)</label></li>
+
+            <li><label><input type="checkbox" value="s_5"> 자바심화
+                <label><input type="number" max="3" min="0" value="0">개 (최대 3개)</label></li>  
+
+            <li><label><input type="checkbox" value="f_3"> DB기초</label>
+                <label><input type="number" max="5" min="0" value="0">개 (최대 5개)</label></li>
+
+            <li><label><input type="checkbox" value="f_5"> HTML/CSS
+                <label><input type="number" max="3" min="0" value="0">개 (최대 5개)</label></li>
+                
+        </ul>
+
+        <b><p>주문 선택</p></b>
+         <ul>
+
+           <li> <label><input type="radio" name="수령방법" value="yes"> 택배</label> </li>
+           <li> <label><input type="radio" name="수령방법" value="no"> 직접수령</label> </li>
+
+         </ul>
+
+    </fieldset>
+
+    <fieldset>
+        <legend>배송정보</legend>
+        <ul>
+            <li><label>이름 <input type="text"> </label></li>
+            <li><label>배송주소 <input type="text"> </label></li>
+            <li><label>이메일 <input type="email"></label></li>
+            <li><label>연락처 <input type="tel"></label></li>
+            <li><label>배송지정 <input type="date">(주문일로부터 최소 3일 이후)</label></li>
+            <li><label>메모 <textarea cols="35" rows="5"></textarea></label></li>
+
+        </ul>
+
+
+    </fieldset>
+        <button>test</button>
+        <label><input type="submit" value="주문하기"> </label>
+        <label><input type="submit" value="취소하기"> </label>  
+      </div>
+    </form>
+</body>
+</html>

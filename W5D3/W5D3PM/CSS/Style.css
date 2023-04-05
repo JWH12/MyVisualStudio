@@ -1,0 +1,23 @@
+p, h1{
+    color : red !important;
+
+
+
+}
+
+div{
+
+    color : blue;
+
+
+}
+#p_color1{
+
+    color : green;
+
+}
+.p_color2{
+
+    color : rgb(165, 252, 3);
+
+}

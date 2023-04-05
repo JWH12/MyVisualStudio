@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!--모든 테그들은 id=""를 가질 수 있다.   
+        <input> : 데이터를 입력 받을 수 있게 해주는 테그이다.
+        <input type="">
+            ※ size ="" : input type의 입력하는 칸 크기를 늘린다
+
+            type
+             1. text : 글자를 입력 받을 수 있다. 
+                1-1. value="값" 을 가질 수 있으며 초기값으로 적용된다
+                1-2. hidden : 해당 요소를 숨기는 기능을 한다.
+
+             2. password : 해당 칸에 입력 할 때 값이 숨겨져서 입력 된다.
+                2-1. placeholder="텍스트" : 해당 칸에 글자를 띄울 수 있다.
+
+             3. id="아이디명" : 아이디를 줘서 다른 input테그와 연결 할 수 있다. 
+
+             ---- checkbox와 radio를 사용할 떄 div를 사용하여 하나로 묶는다.-------
+
+             4. checkbox 텍스트 : 체크박스를 만들 수 있다. 중복이 가능하다.
+                4-1. value="값" : 값을 정해줘야 DB에 데이터를 보내 줄 수 있다.
+             
+             5. "radio" value="값" name="이름"> 텍스트 : 중복체크가 안되는 체크박스를 만든다.
+                5-1. radio버튼은 관련있는 데이터끼리 묶어서 같은 이름을 입력하여 중복이 안되게 한다.
+                          
+             6. number : 숫자만 입력 하게 할 수 있다
+                6-1. max="값" min="값" 최대값과 최소값을 정의 할 수 있다.
+                6-2. range : 증가하거나 감소가 가능한 조절기를 만들 수 있다.
+             
+             7. email : 이메일을 입력 할 수 있는 칸을 만든다.
+
+             8. date : 달력을 생성하여 날짜를 선택 할 수 있게 한다.
+
+             9. submit : 위에서 지정한 다른 페이지로 이동시키는 버튼을 만든다.
+
+             10. file : 첨부파일을 넣을 수 있다.   
+
+        <label> : text를 누르면 체크가 되게 해주는 테그이다. 
+         <label for="id"> : 다른 테그의 id를 입력하여 연결하는 방법이다.
+
+        <fieldset> : 데이터가 포함된 영역을 지정 할 수 있다. 
+            
+        <legend> : 타이틀을 입력 할 수 있다    
+
+        <textarea cols="양옆 크기" rows="위아래 크기" >  : 여러개의 텍스트를 쓸 수 있다. 
+
+        <select>  : 드랍다운 형태로 선택을 하는 기능을 만든다
+            <option value="값"> 값 </option> : 드랍다운의 선택 값을 텍스트로 넣는다. 
+            <option value="값" selected> : 값을 순서를 처음으로 고정시킨다.
+
+
+
+
+
+
+    -->
+</head>
+<body>
+    <form action="">
+     <fieldset>
+        <legend>로그인</legend>
+        
+        <label> 아이디 : <input type="hidden"> </label>
+        <label> 아이디 : <input type="text" id="user_id" size="30"> </label>
+        <label for="user_pw">패스워드 :</label> <input type="password" id="user_pw"
+                    placeholder="패스워드를 입력하세요" >
+        <div>test </div>
+        <div>test </div>
+        <div>test </div>
+
+
+
+     </fieldset>
+     <fieldset>
+        <div> 
+            <legend>체크박스/라디오버튼</legend>
+            <label><input type="checkbox" value="1"> 독서 </label>
+            <label><input type="checkbox" value="2"> 영화감상</label>
+            <label><input type="checkbox" value="3"> 운동</label>
+        </div>
+        <div>
+            <label><input type="radio" name="gender" value="M"> 남자 </label>
+            <label><input type="radio" name="gender" value="F"> 여자 </label>
+        </div>
+
+        <div>
+            <label><input type="radio" name="dept" value="M"> 기계 </label>
+            <label><input type="radio" name="dept" value="F"> 컴퓨터정보학 </label>
+        </div>
+
+     </fieldset>
+
+
+
+     <fieldset>
+        <legend>그외 input</legend>
+        <label> 개수 : <input type="number" max="5" min="0"> </label>
+        <label> 개수 : <input type="range" max="5" min="0"> </label>
+        <label> 메일 : <input type="email"> </label>
+        <label> 날짜 : <input type="date"> </label>
+        <label> 전송 : <input type="file"> </label>
+        <label> 전송 : <input type="submit"> </label>
+        <br>
+        <textarea cols="50" rows="10"></textarea>
+        <br>
+        <select>
+            <option value="java">자바프로그래밍</option>
+            <option value="c">C프로그래밍</option>
+            <option value="DB" selected>데이터베이스</option>
+
+
+
+            
+        </select>
+
+
+
+     </fieldset>
+</form>
+
+</body>
+</html>
