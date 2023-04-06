@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        ul{ /*ul태그 사용시 생기는 동그라미를 없앨 때. */
+            list-style: none;
+
+        }
+
+        a:link{  /*a를 css로 넣을 때는 스타일을 정할 수 있다. 
+                  a를 누르기 전의 상태 */
+            color: black;
+            text-decoration: none;
+
+        }
+
+        a:visited{ /*a링크를 누른 후의 상태. */
+            color: rgb(255, 0, 0);
+            text-decoration: none;
+
+        }
+
+        a:hover{  /*a링크에 마우스를 올렸을 때 반응. */   
+            color: white;
+            background-color: black;
+
+        }
+
+        li{ /* 문자열 맨 앞에 이미지를 넣는다 */  
+           
+            background-image: url("/W5D4/imgees/book-icon.png");
+            background-repeat: no-repeat; /* 반복이 안되게 하기 위한 코드*/
+            padding-left: 50px;  /* 글씨와 겹치지 않게 하기 위한 코드*/ 
+            line-height: 40px;  /* 간격을 주는 코드*/
+            background-position: left center; /* 위치 지정*/
+        }
+
+    </style>
+
+</head>
+
+<!--
+
+
+-->
+
+<body>
+    <nav>
+        <ul>
+
+            <li><a href="#">메뉴1</a></li>
+            <li><a href="#">메뉴2</a></li>
+            <li><a href="#">메뉴3</a></li>
+            <li><a href="#">메뉴4</a></li>
+            <li><a href="#">메뉴5</a></li>
+
+        </ul>    
+    </nav>
+
+
+</body>
+</html>

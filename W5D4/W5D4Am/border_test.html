@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width : 200px;
+            height : 150px;
+            margin : 15px;
+            text-align: center;
+            font-size: 20px;
+            line-height: 150px;
+            border-style: solid ;
+            background : yellow;
+            box-sizing: border-box; /* 여러개의 박스를 하나의 크기로 동일하게 한다. */
+            
+        }
+
+        .box{
+            border-width: 2px; 
+            border-color : red;
+            border-radius: 20px;
+            box-shadow: 2px 2px 5px 0px blue; /*box-shadow: 박스에 그림자를 추가한다. */
+        }
+
+        .box2{
+            border-width: 5px 10px; 
+            border-top-color : red;
+            border-bottom-color : blue;
+            border-radius: 50%;
+            box-shadow: 4px 3px 5px 2px rgb(64, 169, 218);
+        }   
+
+        .box3{
+            border-width: 5px 10px 15px; 
+            border-bottom-color : blue;
+            border-top-left-radius: 20px 50px;
+
+        }
+
+        .box4{
+            border-width: 5px 10px 15px 20px; 
+            border-left-color : red;
+            border-right-color : blue;
+
+        }
+
+    </style>
+
+</head>
+
+<!--
+    width : 좌우
+
+    height : 위아래
+
+    border-color : 선에 색을 준다
+       border-color 사이에 top/ bottom/ left/ right 를 넣어 위치를 지정 할 수 있다.
+
+
+    border-width : 선의 굵기를 정하며 
+        하나일 경우 : 전부 같은 px로 적용
+        두개일 경우 : 첫번째는 상하 두번째는 좌우에 적용
+        세개일 경우 : 첫번째는 상 두번째는 좌우 세번째는 아래에만 적용
+        네개일 경우 : 상 → 오 → 하 → 좌 시계방향 순으로 적용이 된다.
+
+    border-style:  border의 점선, 실선 등의 스타일을 정한다
+
+    line-height: height과 같은 크기로 지정하면 글자를 가운데 정렬을 할 수 있다.
+   
+    border-radius : 테이블의 꼭지점 부분을 둥글게 만들 수 있다.
+        px과 %를 사용하며 원으로 만들고 싶을 경우 50%를 사용한다.
+
+        border-top-left-radius : 상단의 왼쪽만 둥글게 한다. 즉, 꼭지점 마다 둥글게 만들 수 있다.
+
+
+-->
+
+<body>
+    
+    <div class="box">첫번째 테두리</div>
+
+    <div class="box2">두번째 테두리</div>
+
+    <div class="box3">세번째 테두리</div>
+
+    <div class="box4">네번째 테두리</div>
+
+</body>
+</html>

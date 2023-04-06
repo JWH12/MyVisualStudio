@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        *{
+            box-sizing: border-box; /* box사이즈를 통일성 있게 관리하기 위해 종종 사용한다.*/
+
+        }
+
+        .container{
+
+            width: 1200px;
+
+
+        }
+
+        header{
+            font-size: 25px;
+
+        }
+
+        .logo{
+
+            font-size: 25px;
+            background-color: rgb(99, 105, 114);
+            width: 100%; /* 위에 css와 크기와 똑같이하기 위해서 사용한다.*/
+            height: 100px;
+            
+
+        }
+
+        /* 동일한 float을 여러개 사용하여 결합하는 경우 float들의 크기 합이
+           위에서 정한 전체 크기와 같은로 맞춰야 한다.*/
+
+        .content1{
+            float: left;
+            margin-right: 50;
+            background-color: #d3d3d3;
+            font-weight: bold;
+            font-size: 20px;
+            width: 20%;     /*float을 사용한 크기의 합이 container의 크기를 넘기면 안딘다*/
+            height: 600px;
+            
+
+        }
+
+        .content2{
+            float: left;
+            font-weight: bold;
+            background-color: #faf7f7;
+            font-size: 20px;
+            width: 70%;
+            height: 600px;
+           
+        }
+
+        .content3{
+            float: left;
+            background-color: #d3d3d3;
+            font-weight: bold;
+            font-size: 20px;
+            width: 10%;
+            height: 600px;
+           
+        }
+
+        footer{
+            background-color: #8a8a8a;
+            font-weight: bold;
+            font-size: 20px;
+            width: 100%;
+            height: 80px;
+            clear: both;
+        }
+
+    </style>
+
+</head>
+
+<!--
+    사용자에게 알림을 위한 명시적으로 사용하는 단어 시멘트태그
+        header : 타이틀
+        aside
+        footer
+
+    <nav> : 목차를 작성 할 때 사용한다
+    
+-->
+
+<body>
+    <div class="container"> 
+        <header>
+            <div class="logo"><h3>사이트 제목</h3></div>
+            <nav></nav>
+        </header>
+
+        <div class="content1">사이드바</div>  
+        <div class="content2">본문</div> 
+        <div class="content3">사이드바</div> 
+
+        <footer>
+            푸터
+        </footer>  
+
+    </div>
+  
+ 
+</body>
+</html>
