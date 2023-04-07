@@ -1,0 +1,132 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>회원 가입</title>
+  <style>
+    .container {
+      width: 960px;
+      margin : 0 auto;
+      
+    }
+
+    body{
+        background: rgb(204, 204, 204);
+    }
+   
+    #signup {
+      background:#fff;
+      border:1px solid #222;
+      border-radius: 5px;
+      padding: 20px;
+      width: 400px;	
+      margin:30px auto;
+    }
+
+    #signup fieldset {
+      border: 1px solid #ccc;
+      margin-bottom: 30px;
+    }
+        
+    #signup legend {
+      font-size: 16px;
+      font-weight: bold;
+      padding-bottom: 10px;	
+    }
+  
+    #signup ul li {
+      line-height: 30px;
+      list-style: none;
+      padding: 5px 10px;
+      margin-bottom: 2px;
+    }
+
+    #signup label {
+      position: relative;
+      right: 60px;      
+      float: left;
+      font-size: 13px;
+      width: 60px;
+            
+    }
+
+    #signup li:not(:last-child) input:not([type=radio]) { 
+      border: 1px solid #ff0000;
+      border-radius: 3px;
+      padding: 5px;
+      width: 200px;
+    }
+
+    #signup input:not([type=radio]):hover {
+      border-color: rgb(0, 0, 0);
+    }
+    
+    #signup input:checked + label {  
+      color:rgb(0, 0, 0);  
+      font-weight:bold;  
+    }
+
+    #signup button {	
+      border: 1px solid #222;
+      border-radius: 20px;
+      display: block;
+      letter-spacing: 1px;
+      margin: auto;
+      padding: 7px 25px; 
+    }
+
+    
+
+  </style>
+</head>
+
+<body>
+  <div class="container">
+
+       <form id="signup">   
+
+      <fieldset>
+        <legend>로그인 정보</legend>
+        <ul>
+          <li>
+            <label for="fullname">이름</label>
+            <input id="fullname" name="fullname" type="text" required>
+          </li>
+          <li>
+            <label for="pw">비밀번호</label>
+            <input id="pw" name="" type="text">
+          </li>
+          <li>
+            <label for="pw">비밀번호 확인</label>
+            <input id="pw" name="pw" type="text">
+          </li> 
+          <li>
+            <label>회원등급</label>
+            <label>준회원</label>
+          </li>           
+        </ul>
+      </fieldset>
+
+      <fieldset>  
+        <legend>개인 정보</legend>
+        <ul>
+          <li>
+            <label for="fullname">이름</label>
+            <input id="fullname" name="fullname" type="text" required  placeholder="5자미만 공백없이" >
+            
+          <li>      
+          <li>
+            <label for="fullname">메일 주소</label>
+            <input id="fullname" name="fullname" type="email" required placeholder="abcd@domain.com">
+          </li> 
+          <li>
+            <label for="fullname">연락처</label>
+            <input id="fullname" name="fullname" type="tel" required>
+          </li>               
+        </ul>
+      </fieldset>
+      <button type="submit"> 제출 </button> 
+    </form>
+  </div>
+</body>
+</html>

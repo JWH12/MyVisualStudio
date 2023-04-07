@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        ul{
+            list-style: none;
+           
+        }
+
+        li{
+           width: 120px;
+           display: inline-block;
+           margin: 10px;
+           
+        }
+
+        li a{
+            padding: 5px 20px;
+            font-size: 14px;
+            text-decoration: none;
+            font-weight: bold;
+            }
+
+        a[title ^= "en"] {  /*   ^= 은 en으로 시작하는 단어로 옵션을 준다
+                                 |= 은 us이거나 us-로 시작하는 단어를 옵션을 준다  */
+            background: url(/W5D5/imgees/us.png) no-repeat left center;
+        }    
+
+        a[title ^= "jap"] {  /* ja이거나 ja-로 시작하는 단어에 옵션을 준다 */
+            background: url(/W5D5/imgees/jp.png) no-repeat left center;
+        }
+        
+        a[title ^= "chi"] { 
+            background: url(/W5D5/imgees/ch.png) no-repeat left center;
+        }  
+
+        a[href *= "www"] {   /* *=은 특정 단어가 있다면 옵션을 준다*/
+            background: yellow;
+        }   
+
+            
+    </style>
+
+</head>
+
+<!--
+
+
+    
+-->
+
+<body>
+    <ul>
+       
+        <li><a href="#" title="english">영어 </a></li> 
+        <li><a href="#" title="jap">일본어 </a></li>
+        <li><a href="#" title="chi">중국어 </a></li>
+        <li><a href="https://www.naver.com/">네이버 </a></li> 
+        
+
+    </ul>
+
+
+</body>
+</html>

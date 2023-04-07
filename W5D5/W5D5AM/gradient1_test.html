@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        div{
+            width: 500px;
+            height: 300px;
+            border: 1px solid black;
+            border-radius: 10px;
+
+        }
+
+        .grad{
+            background: linear-gradient(to right, rgb(21, 24, 119), rgb(54, 78, 43)); 
+             /*background: linear-gradient(to 시작위치 마무리위치 , 시작 색, 마무리 색);
+               : 특정위치로 가면서 색상을 변경한다. */
+
+        }
+
+        .grad2{
+            background: linear-gradient(310deg, rgb(197, 38, 26), rgb(233, 224, 93)); 
+             /* 숫자deg : 12시를 기준으로 각도를 설정하여 그라데이션을 줄 수 있다. */
+
+        }
+
+        .grad3{
+            background: linear-gradient(to bottom, blue, white 50%, blue); 
+             /* to 위치, 색상1, 색상2 퍼센트, 색상3 : 특정 위치에서 색상과 퍼센트를 지정할 수 있따.*/
+
+        }
+
+
+    </style>
+
+</head>
+
+<!--
+   
+
+-->
+
+<body>
+    <div class="grad"></div>
+    <div class="grad2"></div>
+    <div class="grad3"></div>
+</body>
+</html>

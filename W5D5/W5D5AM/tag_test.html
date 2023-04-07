@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {   
+            background-color: #ccc;
+        }
+
+       section {
+        width: 600px;
+        margin: 20px auto;
+
+       }
+
+       p {
+          width: 500px;
+          padding: 10px;
+          background-color: white;
+          border: 1px solid #aaa;
+          line-height: 2;
+
+       }
+
+       section > p{  /* 위와 같은 p태그 이지만 section 안에 있는 p태그만 따로 옵션을 줄 수있다
+                        section > p와 같이 사용하면 맨처음오는 p태그만 옵션 변경이 가능하다.
+                        section에 포함되있는 태그들은 자식요소이다 */
+            color: blue
+
+
+       }
+        
+       h1 + p{  /* h1 ~ p : h1과 같은 레벨에 있는 p태그들 즉, 형제요소들의 옵션을 변경 한다. 
+                   h1 + p : 형제요소 중에서 맨 처음 요소만 옵션을 변경한다.    */
+
+            background-color: #111;
+            color: white;
+
+       }
+
+    </style>
+
+</head>
+
+<!--
+
+
+-->
+
+<body>
+    <p>안내서</p>
+    <section>
+        <h1>자바 프로그래밍 수업 신청 문의</h1>
+        <p>온라인 신청 : ljsa_032@naver.com
+        <br>
+        전화 : 010-1234-5678로 문의 바랍니다
+         </p>
+        
+            <p>일주일 : 1,000,000원</p>
+            <p>한달 : 5,000,000원</p>
+
+        
+
+    </section>
+
+    
+</body>
+</html>

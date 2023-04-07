@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        div{
+            width: 500px;
+            height: 300px;
+            border: 1px solid black;
+            border-radius: 10px;
+
+        }
+
+        .grad{
+            background: radial-gradient(circle closest-corner at 10% 40% ,white, yellow, red) ;
+             /* 위치를 지정하여 그라데이션을 사용 할 수 있다.        10. 40의 위치 
+                closest-side
+                closest-corner - 가까운 꼭지점에 닿을 때 까지 그라데이션이 만들어 진다/  
+                farthest-corner - 가장 멀리있는 꼭지점에 닿을 때 까지 그라데이션이 만들어 진다 */
+        }
+
+        .grad2{
+            background: radial-gradient(circle farthest-side at 30% 40% ,white, yellow, red) ;
+             /* 위치를 지정하여 그라데이션을 사용 할 수 있다.      30. 40의 위치
+             */   
+
+        }
+
+       
+
+
+    </style>
+
+</head>
+
+<!--
+   
+
+-->
+
+<body>
+    <div class="grad"></div>
+    <div class="grad2"></div>
+    <div class="grad3"></div>
+</body>
+</html>

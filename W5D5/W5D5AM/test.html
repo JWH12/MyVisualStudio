@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        ul{
+            list-style: none;
+           
+        }
+
+        li{
+           width: 120px;
+           display: inline-block;
+           margin: 10px;
+           
+        }
+
+        li a{
+            padding: 5px 20px;
+            font-size: 14px;
+            text-decoration: none;
+            font-weight: bold;
+            }
+
+        /* a[href="#"]{  a[href] : href를 가진 태그들만 스타일을 줄 수 있다.
+                        a[href="#"] : href 중 #을 가진 태그들만 스타일을 줄 수 있다.  
+            background: #ccc;
+            border: 1px solid #ccc;
+            font-weight: normal;
+
+
+        }   */
+          
+        .back{  
+            background-color: #eee;
+            border: 1px solid #222;
+
+        }
+
+        .t_color{ /* 메뉴1번처럼 class는 동시에 여러개 사용이 가능하다.*/
+            color: red;
+
+
+        }
+
+        a[class ~="t_color"]{ /* ~= : 여러개의 class 중 t_color가 포함되면 따로 옵션을 줄 수 있다.*/
+            box-shadow: 2px 2px black;
+
+        }
+
+
+        li:last-child{   /* 마지막 li만 영향을 받는다 */
+            border: 1px solid red;
+        }
+
+        li:first-child{   /* 첫번째 li만 영향을 받는다 */
+            border: 1px solid red;
+        }
+
+        li:not(:last-child){   /* 마지막 li만 빼고 영향을 받는다*/
+            border: 1px solid red;
+        }
+
+        ul li:nth-of-type(2n+1){ /* ul li:nth-of-type(2n) : 짝수번째 요소들이 영향을 받는다
+                                    ul li:nth-of-type(2n+1) : 홀수번째 요소들이 영향을 받느다 */
+            background: #ccc;
+            color: black;
+
+        }
+
+        fieldset:first-of-type{
+            border-color: red;
+        }
+
+        fieldset:last-of-type{ /*  마지막 field만 영향을 받는다
+                                    required는 필수로 입력하라는 뜻으로 쓰인다.*/
+            border: none;
+        }
+        
+    </style>
+
+
+</head>
+<body>
+    <ul>
+        <li><a>메인메뉴:</a></li> 
+        <li><a href="javascript:;" class="back t_color">메뉴1 </a></li> 
+        <li><a href="#" class="t_color">메뉴2 </a></li> 
+        <li><a href="#" class="back">메뉴3 </a></li> 
+        <li><a href="#" class="back">메뉴4 </a></li> 
+    </ul>
+
+    <fieldset></fieldset>
+    <fieldset></fieldset>
+    <fieldset></fieldset>
+    
+
+</body>
+</html>

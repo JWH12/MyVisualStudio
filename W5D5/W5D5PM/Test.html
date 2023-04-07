@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        ul{
+            list-style: none;
+        
+        }
+
+        legend{
+            font-weight: bold;
+        }
+
+        li{
+            display: inline-block;
+            padding: 30px;
+        }
+
+        a:link{
+            color: blue;
+            text-decoration: none;
+        }
+
+        a:visited{
+            color: blue;
+        }
+
+        a:hover{
+            color: white;
+            background-color: black;
+
+        }
+
+        a:active {
+            background-color: red;
+            color: white;
+
+        }
+
+        form{
+            margin: auto;
+            border: 1px solid black;
+            width: 400px;
+            height: 500px;
+            border-radius: 5px;
+        }
+
+        fieldset{
+            border: 2px solid #ccc;
+            width: 300px;
+            height: 150px;
+            margin: 20px 30px;
+            margin-top: 25px;
+            
+            
+        }
+
+        div{
+            position: relative;
+            left : 10px;
+            margin: 20px;
+            font-size: 13px;
+            
+        }
+
+        .button{
+            position: absolute;
+            left: 150px;
+            margin-top: 20px;
+            border-radius: 35%;
+            width: 70px;
+            height: 35px;
+            text-align: center;
+            
+            
+        }
+
+        input:checked + label {  /* input 요소에 checked 속성이 추가되었을 때 label 요소의 스타일 */
+            color:red;  /* 글자색 */
+            font-weight:bold;  /* 글자 굵게 */
+         }
+
+        
+
+    </style>
+</head>
+
+
+<body>
+    
+    <ul>
+        <li><a href="#">이용 안내 </li></a>
+        <li><a href="#">객실 소개 </li></a>
+        <li><a href="#">예약방법 및 요금 </li></a>
+        <li><a href="#">예약하기 </li></a>
+        <hr>
+
+
+    </ul>
+
+    <div>
+    <form action="">
+        
+    <fieldset>
+        <legend>개인정보</legend>
+        <label>이름 <input type="text"></label>
+        <label>연락처 <input type="tel"></label>
+    </fieldset> 
+    
+    <fieldset>
+        <legend>객실 형태</legend>
+        <label><input type="radio" name="객실">기본형(최대 2인)</label>
+        <label><input type="radio" name="객실">가족형(최대 8인) </label>
+    </fieldset>    
+   
+
+    <input type="submit" class="button">
+   
+    </form>
+    </div>
+</body>
+</html>
