@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style> /* 애니메이션을 넣어 순차적으로 변하도록 하는 코드*/
+        #container{
+            width: 500px;
+            margin: 0 auto;
+
+        }
+
+        .box{
+            width: 200px;
+            height: 200px;
+            float: left;
+            margin: 60px;
+           
+        }
+
+        #box1{
+            background-color: yellowgreen;
+            border: 1px solid transparent;  /* transparent : 불투명한 색으로 변경해 준다.  */
+            animation-name: shape; /* 애니메이션 이름을 명시해준다 */
+            animation-duration: 3s; /*animation-duration : 애니메이션 시간을 뜻한다 */
+            animation-iteration-count: infinite; /* 애니메이션 실행 횟수를 지정한다. */
+        }
+
+        #box2{
+            background-color: rgb(80, 219, 201);
+            border: 1px solid transparent;
+            animation-name: rotate; /*  */
+            animation-duration: 3s; 
+            animation-iteration-count: infinite;
+        }
+        
+
+        @keyframes shape{ /* 애니메이션 효과를 주기 위해서 위에서 명시된 애니메이션 명을 지정한다.  */
+            form{   /* 어디서 어떻게 시작 할지 정한다*/
+               border: 1px solid transparent;
+
+            }
+
+            to{     /* 어떻게 마무리 할지 정한다*/
+                border: 1px solid black; 
+                border-radius: 50%;
+
+            }
+
+        }
+
+        
+        @keyframes rotate{ 
+            form{ 
+               transform: rotate(0deg);
+
+            }
+
+            to{
+                transform: rotate(90deg);
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <div class="box" id="box1"></div>
+    <div class="box" id="box2"></div>
+
+</body>
+</html>

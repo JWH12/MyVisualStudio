@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style> /* 애니메이션을 넣어 순차적으로 변하도록 하는 코드*/
+        #container{
+            width: 500px;
+            margin: 0 auto;
+
+        }
+
+        .box{
+            width: 200px;
+            height: 200px;
+            float: left;
+            margin: 60px;
+            animation: rotate 2s infinite, back 2s infinite alternate;
+            /* animation: 이름, 시간, 횟수   
+               alternate : from에서 to까지 반복 후 to에서 from으로 역수으로 다시 반복된다.
+            */
+           
+        }
+
+              
+
+        @keyframes rotate{ /*  */
+            form{      /* 원근감, x축 각도, y축 각도*/
+                transform: perspective(120px) rotateX(0deg) rotateY(0deg); 
+            }
+            
+            50%{    /* 원근감, x축 각도, y축 각도 */
+                transform: perspective(120px) rotateX(180deg) rotateY(0deg);
+            }
+
+            to{     /* 원근감, x축 각도, y축 각도 */
+                transform: perspective(120px) rotateX(180deg) rotateY(180deg);   
+            }
+
+        }
+
+        @keyframes back{ 
+            form{      
+                background-color: red;
+            }
+            
+            50%{    
+                background-color: green;
+            }
+
+            to{     
+                background-color: blue;    
+            }
+
+        }
+
+      
+    </style>
+
+</head>
+
+<body>
+    <div class="box" id="box1"></div>
+    <div class="box" id="box2"></div>
+
+</body>
+</html>

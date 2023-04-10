@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        .box{   /* */
+            margin: 20px auto;
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+            border: 1px solid black;
+           /* transition-property: width height;  상자의 모양이 변경되는 곳을 넓이와 높이로 지정한다. */
+           /* transition-duration: 2s;/* 상자의 모양이 변경되는 시간을 지정한다*/
+           /* transition-property: all;  상자의 모등것을 변경하는 요소이다. 생략가능하다 */
+
+           /* transition:2s ease-in; ease-in /* 천천히 → 보통 순서로 속도가 변경된다*/
+           /* transition:2s ease;  /* 천천히 → 빠름 → 천천히 순서로 속도가 변경된다*/
+           /* transition: 2s ease-out; /* 보통 → 천천히 순서로 속도가 변경된다*/
+           /* transition: 2s ease-in-out; /* 천천히 → 보통 →천천히 순서로 속도가 변경된다*/
+            transition: 2s linear; /* 동일한 속도로 변경된다 */
+        }
+
+        .box:hover{ /* 마우스를 상자에 올렸을 때 상자의 크기 및 색상이 변경됨 */
+
+            width: 300px; /* 마우스를 상자에 올렸을 때 상자의 크기가 변경됨 */
+            height: 300px;
+            background-color: red; /* 마우스를 상자에 올렸을 때 상자의 색상이 변경됨 */
+            transform: rotate(270deg); /* 마우스를 상자에 올렸을 때 상자의 각도가 변경됨 */
+
+        }
+
+    </style>
+
+
+</head>
+
+<body>
+    <div class="box"></div>    
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex</title>
+
+    <style>
+        .container{
+            display: flex; /* flex: 
+                                    1. 가장 큰 요소의 크기를 기준으로 크기를 맞춘다
+                                    2. 부모요소에 적용 시켜야한다 
+                                    3. 정렬 기준을 정할 수 있다. */
+            width: 1000px;
+            height: 150px;
+            background-color: #ccc;
+            border: 1px solid #000;
+            margin-bottom: 10px;
+
+        }
+
+        .box{
+            
+            
+            padding : 5px 50px;
+            margin: 5px;
+            background-color: #000;
+
+        }
+
+        p{
+            color: white;
+            text-align: center;
+
+        }
+
+          
+        #box1{
+            justify-content: flex-start; /* 정렬을 왼쪽을 기준으로 시작한다  */
+
+        }
+
+        #box2{
+            justify-content: flex-end; /* 정렬을 오른쪽을 기준으로 시작한다  */   
+        }
+
+        #box3{
+            justify-content: center; /* 정렬을 가운데를 기준으로 시작한다  */      
+        }
+
+        #box4{
+            justify-content: space-between; /* 시작점과 끝점을 맞춰놓고 동일한 간격을 맞추고 정렬을 시킨다.  */      
+        }
+
+        #box5{
+            justify-content: space-around; /* 시작점과 끝점과 상관없이 동일한 간격을 맞추고 정렬을 시킨다.  */      
+        }
+        
+
+    </style>
+    
+</head>
+
+
+<body>
+    <div class="container" id="box1">
+
+        <div class="box"><p>1</p></div>
+        <div class="box"><p>2</p></div>
+        <div class="box"><p>3</p></div>
+        <div class="box"><p>4</p></div>
+        <div class="box"><p>5</p></div>
+
+    </div>
+
+    <div class="container" id="box2">
+
+        <div class="box"><p>1</p></div>
+        <div class="box"><p>2</p></div>
+        <div class="box"><p>3</p></div>
+        <div class="box"><p>4</p></div>
+        <div class="box"><p>5</p></div>
+
+
+    </div>
+
+    
+    <div class="container" id="box3">
+
+        <div class="box"><p>1</p></div>
+        <div class="box"><p>2</p></div>
+        <div class="box"><p>3</p></div>
+        <div class="box"><p>4</p></div>
+        <div class="box"><p>5</p></div>
+
+
+    </div>
+
+    <div class="container" id="box4">
+
+        <div class="box"><p>1</p></div>
+        <div class="box"><p>2</p></div>
+        <div class="box"><p>3</p></div>
+        <div class="box"><p>4</p></div>
+        <div class="box"><p>5</p></div>
+
+
+    </div>
+
+    <div class="container" id="box5">
+
+        <div class="box"><p>1</p></div>
+        <div class="box"><p>2</p></div>
+        <div class="box"><p>3</p></div>
+        <div class="box"><p>4</p></div>
+        <div class="box"><p>5</p></div>
+
+
+    </div>
+
+
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<title>Transform:scale</title>
+    <style>
+			#container{
+				width:600px;
+				margin:20px auto;
+			}
+
+			.origin {
+				width: 100px;
+				height: 100px;
+				border: 1px solid black;
+				float: left;
+				margin: 40px;
+			}
+
+			.origin > div {				
+				width:100px;
+				height:100px;
+				background-color:orange;
+			}
+
+	/*		
+      #scalex:hover {
+       transform: translateX(50px)  /* translateX : X축으로 상자를 이동한다 
+
+      }
+      
+      #scaley:hover {
+        transform: translateY(30px)  /* translateY : Y축으로 상자를 이동한다 
+        
+      }
+
+      #scale:hover {
+        transform: translate(-20px, 10px)  /* translate : X와 Y축으로 상자를 이동한다. 
+        
+      } */
+
+
+	  #scalex:hover {
+       transform: rotate(50deg)  /* X축으로 비튼다 */
+
+      }
+
+	  #scaley:hover {
+       transform: rotate(-60deg)  /* y축으로 비튼다 */
+
+      }
+	
+		</style>
+	</head>
+
+    <!--
+
+
+    -->
+
+
+	<body>
+		<div id="container">		
+			<div class="origin">
+				<div id="scalex"></div>
+			</div>
+			<div class="origin">
+				<div id="scaley"></div>
+			</div>
+			<div class="origin">
+				<div id="scale"></div>
+			</div>
+		</div>		
+	</body>
+</html>

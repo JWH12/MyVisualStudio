@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex</title>
+
+    <style>
+        .container{
+            display: flex; /* flex: 
+                                    1. 가장 큰 요소의 크기를 기준으로 크기를 맞춘다
+                                    2. 부모요소에 적용 시켜야한다 
+                                    3. 정렬 기준을 정할 수 있다. */
+            width: 800px;
+            background-color: #ccc;
+            border: 1px solid #000;
+
+        }
+
+        .box{
+            
+            width: 80px;
+            padding : 5px 50px;
+            margin: 5px;
+            background-color: #000;
+
+        }
+
+        p{
+            color: white;
+            text-align: center;
+
+        }
+
+        #box1{
+            flex-direction: row; /* 위치지정을 한다 / row는 디폴트 값이다.*/;
+        }
+
+        #box2{
+            flex-direction: row-reverse; /* 정렬을 반대 방향으로 시킨다.*/;
+        }
+
+        #box3{
+            flex-direction: column; /* 위에서 아래로 정렬을 반대 방향으로 시킨다.
+                                        column-reverse : 아래에서 위로 정렬시킨다.*/;
+        }
+
+        
+
+    </style>
+    
+</head>
+
+
+<body>
+    <div class="container" id="box1">
+
+        <div class="box"><p>1</p></div>
+        <div class="box"><p>2</p></div>
+        <div class="box"><p>3</p></div>
+
+
+    </div>
+
+    <div class="container" id="box2">
+
+        <div class="box"><p>1</p></div>
+        <div class="box"><p>2</p></div>
+        <div class="box"><p>3</p></div>
+
+
+    </div>
+
+    <div class="container" id="box3">
+
+        <div class="box"><p>1</p></div>
+        <div class="box"><p>2</p></div>
+        <div class="box"><p>3</p></div>
+
+
+    </div>
+
+
+</body>
+</html>

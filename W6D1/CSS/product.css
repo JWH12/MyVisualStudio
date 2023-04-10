@@ -1,0 +1,48 @@
+#container {
+  width:1000px;
+  margin:20px auto;
+}
+h1 {
+  text-align:center;
+}
+.prod-list {
+  list-style:none;
+  padding:0;
+}
+.prod-list li {
+  float: left;
+  padding: 0;
+  margin: 10px;
+  /*overflow: hidden; /* 위에 올라오기전에 숨기는 코드 */
+  position: relative;
+}
+.prod-list img {
+  margin:0;
+  padding:0;
+  float:left;
+  z-index:5;  /*z-index : 이미지 위에 덮을 수 있게 하는 요소  */
+} 
+
+.prod-list .caption{
+  position: absolute;
+  top: 200px;
+  width: 300px;
+  height: 200px;
+  padding-top: 30px;
+  background: rgba(0, 0, 0, 0.6);  
+  /*rgba : (0,0,0,alpha) 중 alpha는 불투명도를 적용한다 */
+  transition: all 1s ease-in-out;
+  z-index: 20; /* 위에 설정한 z-index보다 높게 설정해야 이미지를 덮을 수 있다. */
+  opacity: 0; /* 불투명도를 조절하여 안보이게 할 수 있다. */
+} 
+
+.prod-list li:hover .caption{ /* li의 마우스가 올라갔을 때 caption의 옵션이 변경되어 표시된다*/
+  transform: translateY(-200px);
+  opacity: 1;
+}
+
+.prod-list .caption h2, .prod-list .caption p{
+  color: #fff;
+  text-align: center;
+
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style> /* */
+        #container{
+            width: 300px;
+            margin: 30px auto
+        }
+
+        img{
+            
+            animation: rotate 2s infinite ;
+            border : 1px solid gray;
+            width: 330px;
+            height: 400px;
+            border-radius: 50%;
+            box-shadow: 5px 5px 15px 2px black;
+           
+        }
+
+    @keyframes rotate{
+        from{ transform: rotateY(0deg);}
+        50%{transform: rotateY(-180deg);}
+        to{ transform: rotateY(-360deg);}
+    }   
+
+    
+
+    </style>
+
+</head>
+
+<body>
+    <div class="imge" id="container" >
+        <img src="/W6D1/imgees/rt.jpg"> </div>
+
+
+</body>
+</html>
