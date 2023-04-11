@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+
+<body style="text-align: center;">
+    <h1 id="test" style="color: blue">자바스크립트 테스트</h1>
+    
+
+</body>
+</html>
+
+
+<!-- 외부에 있는 JS 파일과 연결하는 방법 -->
+<script src="/W6D2/W6D2PM/JS/color.js">
+
+    /* 클릭시 글자를 변경한다  */
+    var tag = document.querySelector('#test');
+    tag.oneclick=function(){
+        tag.style.fontSize = "50px";
+        tag.style.fontWeight = "100";
+    }
+
+</script>

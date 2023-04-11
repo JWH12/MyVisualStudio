@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>주문하기</title>
+  
+</head>
+
+<body>
+  <h2>책 구매</h2>
+  <div id="container">
+    <form>
+        <ul>
+          <li>
+            <label><input type="checkbox" value="s_3">자바 기초</label>
+            <input id="java" type="number" min="0" max="5" value="0"> 개 (최대 5개)
+          </li>
+
+          <li>
+            <label><input type="checkbox" value="s_3">자바 심화</label>
+            <input id="java2" type="number" min="0" max="5" value="0"> 개 (최대 5개)
+          </li> 
+
+          <li>
+            <label><input type="checkbox" value="s_3">DB 기초</label>
+            <input id="db" type="number" min="0" max="5" value="0"> 개 (최대 5개)
+          </li> 
+
+          <li>
+            <label><input type="checkbox" value="s_3">HTML / CSS</label>
+            <input id="ht" type="number" min="0" max="5" value="0"> 개 (최대 5개)
+          </li> 
+
+        </ul>      
+      <div>
+        <input type = "button" id="orderBtn" value="주문하기"> 
+
+      </div>        
+    </form>
+  </div>  
+</body>
+
+</html>
+
+<script>
+    
+   var btn = document.querySelector('#orderBtn');
+    btn.oneclick = function(){
+        var java = document.querySelector('#java');
+        var java2 = document.querySelector('#java2');
+        var db = document.querySelector('#db');
+        var ht = document.querySelector('#ht');
+
+        var num = parseInt(java.value) + parseInt(java2.value) + parseInt(db.value) + parseInt(ht.value);
+
+        if(num <= 0){ 
+          alert("개수를 설정해 주세요");
+          return; 
+
+        } 
+        
+        if(confirm("총 구매 개수가 " + num + "개 맞습니까?")){
+           alert("주문완료");
+        } 
+    }
+
+</script>

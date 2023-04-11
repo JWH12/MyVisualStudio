@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+
+    <style>
+        #wrapper{ /**/
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 한줄에 3개의 컬럼을 관리하며 1:1:1의 비율을 가지게 한다*/
+            
+            /*grid-template-columns: 200px 200px 200px;  /* 컬럼 개수를 지정하여 간격을 지정한다*/
+            
+            grid-template-rows: minmax(100px, auto); /* 최소한 100px을 유지하며 값이 커질경우 자동으로 칸을 늘려서 맞춘다*/
+        }
+
+        .items{
+            padding: 10px;
+            background-color: #eee;
+        }
+
+        .items:nth-child(odd){ /* 홀수값을 출력할 때 사용하며 짝수값은 even을 사용한다.*/
+            background-color: #ccc;
+
+        }
+
+    </style>
+
+
+</head>
+
+<!--Grid layout : 반응형 레이아웃
+    지정한 공간을 기준으로 배치를 하며 페이지가 커지든 줄어들든 지정한 공간은 변하지 않는다.-->
+
+<body>
+
+    <div id="wrapper">
+
+        <div class="items">All samples shall be properly labeled in order to ensure that the results can be traced back to the location from which it was collected. </div>
+        <div class="items">All samples shall be properly labeled in order to ensure that the results can be traced back to the location </div>
+        <div class="items">All samples shall be properly labeled in order to ensure that the results can be </div>
+        <div class="items">All samples shall be properly labeled in order to ensure </div>
+        <div class="items">All samples shall be properly </div>
+
+    </div>
+
+</body>
+</html>

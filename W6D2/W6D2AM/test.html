@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    #container {
+        
+        width:1140px;
+        margin:50px auto;
+    }
+
+    body{ 
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        background-color: #5b80fa;
+    }
+
+    @media screen and (max-width : 1024px){ 
+                
+            body{ 
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            background-color: #5b80fa;
+            }
+          
+       }
+
+       @media screen and (max-width : 720px){ 
+                
+                body{ 
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+                background-color: #5b80fa;
+                }
+              
+           }   
+
+    .box{
+
+        position:relative;
+        float:left;  
+        width:500px;
+        height:250px;
+        margin:10px;
+        border:1px solid #0f0f0f33;
+        background-color:#ffffff;   
+        text-align: center;
+       
+    }
+
+    img{
+        float: left;
+        max-width: 250px;
+        line-height: 200px;
+        margin: auto;
+    }
+
+    p{
+        font-weight: bold;
+        font-size: 15px;
+    }
+
+    
+
+     </style>    
+
+</head>
+
+
+<body id="container">
+    <div>
+        <div class="box"><img src="/W6D2/imgees/rt.jpg"><p>그러해서 그러하니 그러하다</p></div>
+        <div class="box"><img src="/W6D2/imgees/rt.jpg"><p>그러해서 그러하니 그러하다</p></div>
+
+
+    </div>
+    
+
+
+</body>
+</html>

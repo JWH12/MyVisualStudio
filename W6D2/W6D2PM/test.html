@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            font-size: 2em;
+            text-align: center;
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+
+    
+</body>
+</html>
+
+
+<script> /**/
+    var date = new Date(); /* 날짜를 불러오는 변수*/
+    document.write(date.toLocaleTimeString() + "<br>")  
+    /* body 태그를 통하여 화면에 출력해 준다. 태그를 붙여서 사용 할 수있다.
+       date.toLocaleTimeString()메소드는 시간을 가져온다  */
+ 
+    document.write(date.getUTCFullYear()+ "<br>") /* 현재 연도를 불러온다*/
+    document.write(date.getMonth()+1 + "<br>") /* 현재 월을 불러온다 1월을 0으로 표시함*/
+    document.write(date.getDate()+1 + "<br>")  /* 현재 일을 불러온다*/ 
+    document.write(date.getHours()+1 + "<br>")  /* 현재 몇시인지 알려준다*/
+    document.write(date.getMinutes()+1 + "<br>") /* 현재 몇분인지 알려준다*/
+    document.write(date.getSeconds()+1 + "<br>") /* 현재 몇초인지 알려준다*/
+
+    var date2 = date.getUTCFullYear() + "년" +   (date.getMonth()+1) + "월";
+    document.write(date2)  /* 년도와 글자를 같이 출력한다.*/
+
+
+    console.log(date);
+
+</script>

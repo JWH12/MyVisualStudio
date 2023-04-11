@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style> /**/
+    .wrapper{
+        width: 700px;
+        display: grid;
+        grid-template-columns: repeat(3. 1fr);
+        grid-template-rows: repeat(3, 100px);
+        grid-template-areas:
+          "box1 box1 box1"
+          "box2 box3 box3"
+          "box2 . box4"
+        ; /* 요소들을 직접 표시하여 위치 및 칸의 수를 지정 할 수 있다
+             빈칸인 경우 .을 사용한다 */
+    }
+
+    .box{
+        padding: 15px;
+        color: white;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .box1 {
+       
+       background-color: blue;
+       grid-area: box1;
+      
+    }
+
+    .box2 {
+       
+       background-color: rgb(93, 219, 110);
+       grid-area: box2;
+    } 
+
+    .box3{
+       
+       background-color: rgb(233, 181, 86);
+       grid-area: box3;
+    }
+
+    .box4{
+       
+       background-color: rgb(223, 87, 211);
+       grid-area: box4;
+    }
+
+   
+
+    </style>
+
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="box box1">box1</div>
+        <div class="box box2">box2</div>
+        <div class="box box3">box3</div>
+        <div class="box box4">box4</div>
+       
+    </div>
+    
+</body>
+</html>
