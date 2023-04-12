@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+<body>
+   
+    <!--버튼을 눌렀을 때 팝업창이 뜨게 한다.-->
+    <button onclick="popup()">팝업</button>
+    
+    
+</body>
+</html>
+
+<script>
+
+ //팝업 창을 열리게 할 때 사용한다. 
+
+ function popup(){ 
+    window.open("notice.html", "팝업아이디자리", "width=600px, height=450px, left=100, top=100")
+      //만든 팝업창을 연결한다./ 팝업 창의 크기를 지정 할 수 있다. / 팝업창이 뜨는 위치를 지정 할 수 있다.
+      // 팝업에 아이디를 주게 되면 중복되어 열리는 것을 방지 할 수 있다.
+  }
+
+  //팝업 창이 뜨지 않을 때 사용자에게 알람이 가게 한다.
+  function popup(){ 
+    var newPop = window.open("notice.html", "팝업아이디자리", "width=600px, height=450px, left=100, top=100")
+    if(newPop == null){ //만약 팝업이 뜨지 않을 경우 아래의 메세지를 띄운다.
+        alert("팝업 해제 후 새로고침 해주세요")
+    }
+  }
+
+</script>

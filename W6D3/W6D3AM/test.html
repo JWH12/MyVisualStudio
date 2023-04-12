@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  
+</head>
+<body id="bd">
+  <h3 id="txt">버튼 테스트</h3>
+
+  <input type = "button" id="backBtn" value="배경 색 변경"> 
+  <input type = "button" id="fontBtn" value="글자 색 변경"> 
+  <input type = "button" id="sizeBtn" value="글자 크기 변경"> 
+        
+
+
+</body>
+</html>
+<script>
+
+  var backBtn = document.querySelector('#backBtn');
+  var fontBtn = document.querySelector('#fontBtn');
+  var sizeBtn = document.querySelector('#sizeBtn');
+
+      
+  backBtn.onclick = function(){
+    var bd = document.querySelector('#bd');
+    bd.style.backgroundColor = "#ccc";
+  }
+
+  fontBtn.onclick = function(){
+    var txt = document.querySelector('#txt');
+    txt.style.color = "red";
+  }
+  
+  sizeBtn.onclick = function(){
+    var txt2 = document.querySelector('#txt');
+    console.log(parseInt(txt2.style.fontSize)); /* 숫자와 문자가 조합 되어 있을 때 문자를 빼고 숫자만 출력이 가능하게 하지만
+                                                    숫자 앞에 문자가 있으면 출력이 불가능하다*/
+    txt2.style.fontSize = "30px";
+  }    
+
+</script>
+​

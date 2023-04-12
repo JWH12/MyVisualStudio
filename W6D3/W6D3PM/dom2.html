@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello, Javascript</title>
+
+</head>
+
+<body>
+    <div name = "test3" id="str" >
+        안녕~~!! 자바스크립트
+        <!-- <span id="str2">재밌다!!!!!!</span> -->
+    </div>
+
+    <ul>
+        <li id="test" name = "test3">첫번째</li>
+        <li class="test2">두번째ㅋㅋ</li>
+        <li id="test">세번째ㅎㅎ</li>
+        <li class="test2">네번째^^</li>
+        <li class="test2">다섯번째...</li>
+    </ul>
+
+    <div id="innerTest" >
+
+    </div>
+
+</body>
+</html>
+
+<script>
+//
+    var item = document.getElementById("test");  // 같은 id가 여러개가 있을 경우 첫번째 요소만 가져오기 때문에 중복을 피해야 한다.
+    item.style.color = "blue";
+
+    var item2 = document.getElementsByClassName("test2");  // 중복으로 사용하고 싶으면 class를 사용하여야 한다.
+        for(var i=0; i<item2.length; i++){
+            item2[i].style.color = "red";
+
+    }
+    
+    var item3 = document.getElementsByName("test3");  // name이 같은 요소들에  backgroundColor를 준다.
+    for(var i=0; i<item3.length; i++){
+        item3[i].style.backgroundColor = "gray"
+        
+    } 
+
+    var title = document.title; // title에 있는 텍스트를 가져 올수 있다. 
+    document.write(title);
+
+    var str = document.getElementById("str");
+    
+    console.log(str.innerHTML); // 문자열로 들어간 태그가 실행이 된다.
+
+    str.innerText = "안녕" + "<br>" + "반갑습니다"; // 태그가 문자열로 인식이 된다.
+    
+    console.log(str.innerText); // innerText는 문자열만 들어 갈 수 있기 때문에 태그가 실행이 안된다
+
+
+    // innerTest안에 '자바스크립트 노잼'에서 '노잼'만 파란색으로 출력
+
+    var innerTest = document.getElementById("innerTest");   
+    // innerTest.innerHTML = "자바스크립트" + "<span style= 'color : blue;'>" + "노잼" +"</span>";
+    innerTest.innerHTML = "자바스크립트 <span style= 'color : blue;'> 노잼 </span>";
+    
+
+</script>

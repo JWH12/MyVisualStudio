@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        ul{
+            list-style: none;
+                           
+        }
+
+      
+
+
+
+
+    </style>
+
+</head>
+
+<body>
+    <ul>
+        <li>첫번째</li>
+        <li>두번째ㅋㅋ</li>
+        <li>세번째ㅎㅎ</li>
+        <li>네번째^^</li>
+        <li>다섯번째...</li>
+    </ul>
+</body>
+</html>
+
+<script>
+    // Dom -> Document Object Model 의 약자로서 각 요소에 쉽게 접근이 가능하게 해준다.
+    
+   var list = document.getElementsByTagName("li"); // li태그로 된 모든 요소를 다 가져온다
+   
+
+   for(var i=0; i< list.length; i++){
+       
+        list[i].style.display = "inline-block"
+        list[i].style.fontSize = "20px"
+
+      if(i % 2 == 0 ){  // 홀수번째 글의 색을 빨간색으로 변경한다.
+        list[i].style.backgroundColor = "gray";
+
+      } else {
+        list[i].style.backgroundColor = "aqua";
+        
+
+    } 
+
+   }
+   
+   
+
+   
+
+
+
+
+</script>

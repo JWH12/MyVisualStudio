@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #container{
+            width: 300px;
+            margin: 10px auto;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div id="container">
+        <img src="/W6D3/imgees/cup4.jpg" id="img">
+    </div>
+
+</body>
+
+</html>
+
+<script>
+//event 발생============================================================
+    // var img = document.querySelector("#img");
+
+    // img.onclick = function(event){  // 이미지를 눌렀을 때 event 발생하게 한다. 
+        
+        // console.log(event);
+        // alert("이벤트 타입 : " + event.type); // 이미지를 눌렀을 때 event의 타입을 알려주는 문구가 뜨게 한다. 
+        // alert("이벤트 발생 위치 : " + event.pageX + "," + event.pageY);  // 이미지를 눌렀을 때 이미지의 위치좌표를 알려주는 문구가 뜨게 한다. 
+
+        // console.log(this.src); //
+    // }
+
+
+//============================================================
+
+// 마우스가 이미지 위에 올라갔을 때와 내렸을 때의 이미지가 
+
+var img = document.querySelector("#img");
+    img.addEventListener("mouseover", changeImg); // 마우스를 올렸을 때 뒤에있는 함수가 실행된다.
+    img.addEventListener("mouseout", changeImg2); // 마우스를 내렸을 때 뒤에있는 함수가 실행된다. 
+
+
+    function changeImg(){
+        img.src = "/W6D3/imgees/cup2.jpg"; // 마우스를 올렸을 때 이미지.
+    }
+
+    function changeImg2(){
+        img.src = "/W6D3/imgees/cup4.jpg"; // 마우스를 내렸을 때 이미지.
+    }
+
+
+
+</script>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>자바스크립트 이벤트</title>
+	<link rel="stylesheet" href="/W6D3/css/function.css">
+</head>
+
+<body>
+	<ul>
+		<li><a href="#" onclick="back('green')">Green</a></li>
+		<li><a href="#" onclick="back('Orange')">Orange</a></li>
+		<li><a href="#" onclick="back('Purple')">Purple</a></li>
+	</ul>		
+	<div id="result"></div>
+</body>
+</html> 
+
+<script>
+	function back(color){
+		var result = document.querySelector('#result');
+		result.style.backgroundColor = color
+
+	}
+
+</script>
