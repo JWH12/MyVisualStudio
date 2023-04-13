@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="txt">자바 스크립트 재밌다.</div>
+    <div id="txt2"></div>
+    <button id="btn" onclick="insert()">추가</button>
+</body>
+</html>
+
+<script>
+// 새로운 요소를 넣는다 ========================================================
+    function insert(){
+
+        var txt = document.getElementById("txt");
+        var insertNode = document.createElement("p");  // createElement() : 새로운 요소를 만든다. 괄호는 태그값을 뜻한다. 
+        insertNode.innerHTML = "추가된 노드"           // p태그에 글을 추가한다.
+        document.body.insertBefore(insertNode, txt); // body태그 안에 넣는다.
+    }
+
+
+// 새로운 속성을 넣는다 ========================================================
+    // function insert(){
+
+    //     var txt = document.getElementById("txt");
+    //     var style = document.createAttribute("style"); // 속성을 만든다 ex) id, style, src 등
+    //     style.value = "color : red;"; // 인라인 태그에 넣듯이 입력해야 한다.
+    //     txt.setAttributeNode(style); // setAttributeNode :속성을 넣는다
+    
+    // }
+
+
+// ================================================================
+    // function insert(){
+
+    //     var txt2 = document.getElementById("txt2");
+    //     var text = document.createTextNode("new Text"); //
+    //     txt2.appendChild(text);
+
+    // }
+
+
+
+
+
+</script>

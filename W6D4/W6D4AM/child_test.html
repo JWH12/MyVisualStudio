@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>DOM</title>
+
+  <style>
+
+    #container{
+      width:500px;
+      margin:10px auto;
+      padding:20px;
+    }
+    #info {
+      margin-top:20px;
+    }
+
+  </style>
+
+</head>
+
+<body>
+  <div id="container">    
+    <h1>자바스크립트</h1>
+    <a href="#" onclick="addContents(); this.onclick='';">더 보기</a>   
+     <!-- this.onclick='';" : 클릭이 한번 되었을 때 클릭 된 값을 빈칸으로 만들어서 값이 중복적으로 나오지 않게 만든다 -->
+    <div id="info"></div>
+    
+    
+  </div>
+  
+</body>
+</html>
+
+
+<script>
+    function addContents() {
+
+      var newP = document.createElement("div");
+      var txtNode = document.createTextNode("자바스크립트 재밌다~~");
+      newP.appendChild(txtNode); // <div> 태그를 추가하고 텍스트를 추가한다.
+      
+      var newImg = document.createElement("img");    // img 요소를 만든다
+      var srcNode = document.createAttribute("src"); // src 속성을 만든다
+      var altNode = document.createAttribute("alt"); // alt 속성을 만든다
+
+      srcNode.value = "../imgees/rt.jpg"; // src 속성에 이미지 값을 넣는다.
+      altNode.value = "예제 이미지";      // alt 속성에 "예제 이미지"라는 값을 넣는다.
+      newImg.setAttributeNode(srcNode);  // 위에서 만들어 놓은 src 속성을 img 요소에 넣는다
+      newImg.setAttributeNode(altNode);  // 위에서 만들어 놓은 alt 속성을 img 요소에 넣는다
+      
+      // 위으 코드들을 <body> 태그에서 작성하면 <img src='images/coffee-gray.jpg' alt='예제 이미지'> 이다.
+
+
+      // info 아이디를 가진 요소에 div태그와 이미지태그를 새롭게 넣는다.
+      document.getElementById("info").appendChild(newP);
+      document.getElementById("info").appendChild(newImg);
+
+    }
+  </script>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body id="bd">
+    <label>내용 : <input type="text" id="text"></label>
+    <label>색깔 : <input type="text" id="color"></label>
+  
+    <button id="btn" onclick="add()">추가</button>
+</body>
+</html>
+<script>
+    function add(){
+        var text = document.getElementById("text").value;
+        var color = document.getElementById("color").value;
+        var tag = document.createElement("div");
+      
+        tag.setAttribute("style", "color:" + color + ";");
+        tag.appendChild(document.createTextNode(text));
+        
+        var body = document.getElementById("bd"); // document.body;
+        body.appendChild(tag);
+    }
+    
+
+</script>

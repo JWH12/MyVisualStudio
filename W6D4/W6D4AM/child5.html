@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3 id="javaS" style="color: red;"> 자바스크립트 테스트</h3>
+    <div id="list">
+        <p>자바</p>
+        <p id="ins">데이터베이스</p>
+        <p>HTML</p>
+    </div>
+    <button onclick="remove()">테스트</button>
+</body>
+</html>
+
+<script>
+    // 자식요소를 줄에서 삭제하기
+
+    // function remove(){  // 태그에 부여된 속성을 지운다.
+    //     var list = document.getElementById("list"); //삭제할 요소
+    //     var db = document.getElementById("db");
+    //     list.removeChild("db");      // 자식노드를 삭제한다.
+
+    //     }
+
+    
+    function remove(){  // 태그에 부여된 속성을 지운다.
+        var java = document.getElementById("javaS");
+        java.removeAttribute("style"); 
+
+        }
+
+
+</script>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body id="bd">
+    <div name="test">test</div>
+    <p id="html"></p>
+    <span>zzz</span>
+</body>
+
+</html>
+
+<script>
+
+    // console.log(document.childNodes); 
+    // document의 자식노드를 불러온다. document의 자식은 <!DOCTYPE html>와 <html>태그이다. 
+
+    //  console.log(document.getElementById("bd").childNodes[1].nodeName); 
+        // bdoy태그의 자식노드를 찾는다
+        
+
+    document.getElementById("html").innerHTML
+        = document.childNodes[1].childNodes[2].nodeName;  
+
+
+    console.log(document.childNodes[1].childNodes); 
+    // document 자식노드 중 <html>을 가져 온 것이다.
+
+        
+
+   
+
+</script>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="/W6D4/css/ex1.css">
+</head>
+<body>
+  <div id="container">
+    <h1>추가하기</h1>
+
+    <p>메모할 내용 작성</p>
+
+    <form action="">
+      <input type="text" id="subject" autofocus>
+      <button>추가</button>
+    </form>
+
+    <hr>  
+    <ul id="itemList"></ul>  
+  </div>
+
+</body>
+</html>
+
+<script>
+  function newRegister() {
+    var item = document.createElement("li");          // li 태그 추가 
+    var subject = document.getElementById("subject");  // 입력 정보(input) 객체 가져오기
+    var text = document.createTextNode(subject.value);  // 텍스트 정보 텍스트 노드로
+    item.appendChild(text);  // 텍스트노드를 자식노드로 축
+
+    var itemList = document.getElementById("itemList");  // ul 태그 정보 가져오기 
+    itemList.insertBefore(item, itemList.childNodes[0]);  // ul 태그 자식 중 첫번째에 추가
+            
+    subject.value="";
+
+    var items = document.getElementsByTagName("li");  // li 태그 정보 가져오기
+    for(i=0; i<items.length; i++) {
+      items[i].addEventListener("click", function() {  // 각 항목에 클릭 이벤트 추가
+        var list = document.getElementById("itemList");
+        list.removeChild(this); // 부모 요소에서 해당 객체 제거
+        
+        // if(this.parentNode)    // 부모 노드 있을 시
+        //   this.parentNode.removeChild(this);  // 모 요소에서 해당 객체 제거
+      });
+    }
+  }
+</script>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="head">
+        자바스크립트 노드 예제
+        <span>어렵다</span>
+        <p>정말 어렵다</p>
+        <div>정말 어렵다</div>
+    </div>
+    <div id="txt1">첫번째 텍스트</div>
+    <div id="txt2">두번째 텍스트</div>
+</body>
+</html>
+
+<script>
+    // var headText = document.getElementById("head").firstChild.nodeValue; 
+    // firstChild : 첫번째 자식노드를 나타낸다.
+    // nodeValue : 지정한 노드의 값을 출력해준다.
+
+    // document.getElementById("txt1").innerHTML = headText;
+    
+
+    // console.log(document.getElementById("head").firstChild);
+    // <div></div> 안의 텍스트(줄바꿈과 띄어쓰기 포함)도 자식 노드이다.
+
+
+
+    console.log(document.getElementById("head").childNodes);
+    var list = document.getElementById("head").childNodes;
+
+    for(var i=0; i<list.length; i++){
+
+        if(list[i].nodeType == 1){  // 노드타입의 번호가 1번인 요소들의 글자색을 변경한다.
+            list[i].style.color = "red"; 
+
+        }
+
+        if( list[i].nodeName == "SPAN"){ // 노드이름이 "span"인 요소들의 배경색을 추가한다.
+            list[i].style.backgroundColor = "#ccc" 
+            
+        }
+
+        console.log(list[i].nodeType); // 노드타입의 번호를 확인한다
+        console.log(list[i].nodename); // 노드이름을 확인한다
+
+
+    } // nodeType 값 중 숫자 1은 (태그, 요소)를 뜻한다, 3은 (text)를 뜻한다
+
+
+
+
+</script>

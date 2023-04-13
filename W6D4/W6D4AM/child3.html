@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3 id="javaS"> 자바스크립트 테스트</h3>
+    <div id="list">
+        <p>자바</p>
+        <p id="ins">데이터베이스</p>
+        <p>HTML</p>
+    </div>
+    <button onclick="insertTxt()">테스트</button>
+</body>
+</html>
+
+<script>
+
+
+// 지정한 위치 가장 밑에 새로운 노드를 추가하는 방법 ======================================
+    // function append(){
+    // var list = document.getElementById("list");
+    // var java = document.getElementById("javaS");
+    // list.appendChild(java); // list 안에다가 새로운 list를 가장 밑에 넣을 수 있다.
+    //                         // id가 java인 <h3>가 id가 list인 <div> 태그의 자식 노드로 들어간다.
+    // }
+
+// 지정한 위치 전에다가 새로운 노드를 추가하는 방법 ======================================
+    // function insert(){
+    //     var list = document.getElementById("list");
+    //     var java = document.getElementById("javaS");    
+    //     var ins = document.getElementById("ins"); 
+    //     list.insertBefore(javaS, ins); // 첫번째는 넣고자 하는 요쇼, 두번째는 넣을 위치를 지정한다.
+
+    // }
+
+// 지정한 위치 중간에 새로운 텍스트를 추가하는 방법 ======================================
+    function insertTxt(){
+        var txt = document.getElementById("javaS").firstChild; // javas의 첫번째 노드를 선택
+        txt.insertData(7, "정말 어렵다 "); //
+
+
+    }
+
+
+</script>

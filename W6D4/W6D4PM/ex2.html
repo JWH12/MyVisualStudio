@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        div{
+            display: inline-block;
+        }
+    </style>
+    
+</head>
+<body id="bd">
+    <div>
+        <div id="text"> 내용 : <input type="text" autofocus></div>
+        <div id="color"> 색깔 : <input type="text"> </div>
+        <button onclick="int(color)">추가</button>
+        
+    </div>
+    
+</body>
+</html>
+
+<script>
+    function int(){
+        
+        var txt = document.createElement("p");         
+        var text = document.getElementById("text"); 
+        var text2 = document.createTextNode(text.value);
+        txt.appendChild(text2);
+
+        
+        var bd = document.getElementById("bd"); 
+        bd.insertBefore(txt, bd.childNodes[2]);  
+                
+        text.value="";
+ 
+
+        
+        var tc = document.getElementsByTagName("div");
+            tc.style.Color = 'red';
+        
+
+    }
+
+
+   
+
+</script>

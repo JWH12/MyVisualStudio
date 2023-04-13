@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       
+        #container{
+            width:1140px;
+            margin:50px auto;
+        }
+
+        h1{
+            text-align: left;
+        }
+
+        #box1{
+            float: left;
+            margin-right: 50px;
+            margin-top: 10px;
+            width: 200px;
+            height: 250px;
+            background-image: url(/W6D4/imgees/java1.png);
+            background-size: cover;
+            
+        }
+
+        div{
+            
+            padding: 5px;
+
+        }
+
+       button{
+            margin-top: 10px;
+            width: 250px;
+            padding: 10px;
+
+       }
+
+       img{
+         width: 60px;
+
+       }
+
+       .over {
+			position:absolute;
+			left:30px;
+			bottom:30px;
+		}
+
+    </style>
+
+</head>
+<body id="container">
+    <h1>자바스크립트</h1>
+    
+    <div id="box1"> </div>
+    <div>
+        <div>상품명 : 자바스크립트 책</div>
+        <div>판매가 : 2,000,000원</div>
+        <div>배송비 : 1,000,000원</div>
+        <div>(2,000,001원 이상 구매시 무료)</div>
+        <div>적립금 : 20원(0.0001%)</div>
+        <div>발간일 : 1999.12.31</div>
+        <button>장바구니 담기</button>
+        <p><a href="#" class="over" onclick="show()" id="open">상세 설명 보기</a></p>
+
+        <img src="/W6D4/imgees/java2.png" id="img1">
+        <img src="/W6D4/imgees/java3.jpg" id="img2">
+        <img src="/W6D4/imgees/java4.png" id="img3">
+
+        <div id="desc" class="detail">
+			<h2 style="color: gray;">자바스크립트 책</h2>
+            <br>
+			 <ul>
+                <li> 출판사 : 구로디지털단지</li>
+                <li> 지 역 : 서울</li>
+                <li> 원 가 : 2,500,000원</li>
+                <li> 판매가 : 2,000,000원</li>
+                <li> 저 자 : 홍길동</li>
+                <li> 문 의 : hong@naver.com</li>
+             </ul>
+
+             <h3>저자의 말</h3>
+             
+             <div>자바스크립트의 모든 것을 담기 위해 노력했습니다. 속는셈 치고 구매해주세요</div>
+
+             <ol>
+                <li>자바스크립트 기초</li>
+                <li>자바스크립트 심화</li>
+                <li>자바스크립트 활용</li>
+             </ol>
+			
+          </div>
+
+        
+    </div>
+    
+</body>
+</html>
+
+<script>
+
+   var img = document.getElementById("img1");
+        img.addEventListener("", changeImg); 
+        img.addEventListener("mouseout", changeImg2);  
+
+
+    function changeImg(){
+        img.src = "/W6D4/imgees/java3.jpg"; 
+    }
+
+    function changeImg2(){
+        img.src = "/W6D4/imgees/java4.png"; 
+    }
+
+
+    function show(){
+    var open = document.getElementById("open");
+    open.style.display = "none";
+    document.querySelector('#desc').style.display = "block";
+   }
+
+   
+
+</script>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container{
+            width : 1000px;
+            height : 800px;
+        }
+    </style>
+</head>
+<body id="bd">
+    <div id="container">
+        <button id="btn">이동 버튼</button>
+    </div>
+</body>
+</html>
+<script>
+    var body = document.getElementById("bd");
+    body.onclick = function(event){
+        var btn = document.getElementById("btn");
+        btn.style.position = "absolute";
+        btn.style.left = event.pageX + "px";
+        btn.style.top = event.pageY + "px";
+    }
+</script>
