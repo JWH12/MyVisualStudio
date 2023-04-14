@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="/W6D5/js/jquery-3.6.4.min.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 1번. 텍스트 어디를 누르든 반갑습니다라는 텍스트 크기가 커지게 하난 예제 -->
+    <div>안녕하세요 <span>반갑습니다</span> 왼쪽 문구를 클릭해보세요</div>
+
+    <!-- 2번. 텍스트 어디를 누르든 아이디가 있는 텍스트 크기가 커지게 하난 예제 -->
+    <p>자바스크립트 <span id="sp">ㅎㅎㅎㅎ</span> testtest</p>
+
+    <!-- 3번. 텍스트 어디를 누르든 클래스가 있는 텍스트 크기가 커지게 하난 예제  -->
+    <p>자바스크립트 <span class="sp">ㅎㅎㅎㅎ</span> testtest</p>
+    <p>자바스크립트 <span class="sp">ㅎㅎㅎㅎ</span> testtest</p>
+    
+</body>
+</html>
+
+<script>
+// 1번========================================================================
+//        $(function() {
+
+//         $("div").on("click", function(){
+
+//             $("span").css("fontSize",("30px"))
+//     })
+// })
+
+// 2번========================================================================
+//     $(function() {
+
+//         $("p").on("click", function(){
+
+//             $("#sp").css("fontSize",("30px"))
+//     })
+// })
+
+// 3번========================================================================
+    $(function() {
+
+        $("p").on("click", function(){
+
+            $(".sp").css("fontSize",("30px"))
+    })
+})
+
+
+</script>

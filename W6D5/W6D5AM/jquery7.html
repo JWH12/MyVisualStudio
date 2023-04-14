@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="/W6D5/js/jquery-3.6.4.min.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul id="list">
+
+        <li>자바</li>
+        <li>데이터베이스</li>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JAVASCRIPT</li>
+        <li>제이쿼리</li>
+        <li>JSP</li>
+        
+    </ul>
+
+    <button id="btn1">클릭</button>
+    <button id="btn2">클릭2</button>
+
+    <div id="text"></div>
+    
+</body>
+</html>
+
+<script>
+    $(function(){
+        $("#btn1").on("click", function(){
+
+            // $("#list").append("<li>추가된 텍스트</li>"); // 속성을 추가할 때 태그를 사용해도 된다.
+
+            $("li").prepend("안녕 "); // .prepend : li태그 앞에 요소를 추가한다.
+
+            $("#btn1").attr("disabled", "disabled"); // 클릭을 한번 했을 때 더이상 클릭이 안되게 한다.     
+
+             
+        })
+    })
+
+    $(function(){
+        $("#btn2").on("click", function(){
+            
+            $("#btn1").removeAttr("disabled");  // btn1의 설정한 disabled을 해제시킨다/     
+        })
+    })
+
+</script>

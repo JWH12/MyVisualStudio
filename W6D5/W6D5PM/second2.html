@@ -1,0 +1,110 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="/W6D5/W6D5PM/index.css">
+        <script src="js/jquery.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+        <style>
+            table, td, th {
+                border : 1px solid black;
+                font-size: 20px;
+                text-align: center;
+                border-collapse: collapse;
+                padding: 5px 20px;
+            }
+
+        </style>
+</head>
+ 
+<body>      
+    <div id="app">
+
+<!-- data에 있는 grade의 값이 조건에따라 바뀌게하는 예제 ====================================== -->
+      <h1 v-if="grade >= 90" style="color:red">A</h1> 
+      <h1 v-else-if="grade >=80" style="color:blue">B</h1> 
+      <h1 v-else-if="grade >= 70" style="color:yellow">C</h1> 
+      <h1 v-else-if="grade >= 60" style="color:green">D</h1> 
+      <h1 v-else style="color:gray">E</h1> 
+
+      <label>점수입력 : <input type="text" id="grade" v-model="inGrade"></label>
+
+      <button @click="fnAge()">클릭</button>   
+     <!--  vue에서 버튼을 사용할 때 @click(=v-click) 를 사용한다.
+        버튼을 누르면 methods의 fnAge의 함수가 실행된다.-->
+
+
+
+<!-- v-for문 map형태=========================================================================-->
+      <ul>
+        <li v-for="item in map">{{item}}</li> <!--map 값에 순차적으로 접근하여 출력한다. 
+                                                    첫번째 바퀴에는 pName 
+                                                    두번째 바퀴에는 price
+                                                    세번째 바퀴에는 size-->
+      </ul>
+
+
+<!-- v-for문 list형태=========================================================================-->
+   <!--list안에 있는 값들을 테이블의 형태에 맞게 순차적으로 접근하여 출력한다. -->
+      <table>
+        <tr> 
+            <th>no.</th>
+            <th>이름</th>
+            <th>가격</th>
+            <th>사이즈</th>
+        </tr>
+
+    <!-- price가 15000원 이상 index가 2이상인 값만 나오게 한다.-->
+        <tr v-for="(item, index) in list" > 
+            <template v-if="item.price >= 15000 && index > 2">  <!-- <template>를 통해서 독립적으로 관리가 가능하다.-->
+                    <td>{{index+1}}</td>
+                    <td>{{item.pName}}</td>
+                    <td>{{item.price}}</td>
+                    <td>{{item.size}}</td>
+            </template>
+        </tr>
+
+      </table>
+    
+    </div> 
+   
+</body>
+</html>
+
+<script>
+    var app = new Vue({ 
+    el: '#app',  // 해당 아이디의 영역에서 입력되야 출력이된다
+
+    data: {     // data라는 맵에 넣기 때문에 변수타입을 정하지 않는다.
+                // 데이터 영역으로서 변수를 지정한다.
+                
+        name : "홍길동", //전역 변수로서 페이지 전체에 적용된다.
+        age : 30,
+        grade : 85 , 
+        inGrade : 0 , 
+        map : {pName : "snack_11", price : 15000, size : "10cm"}, 
+
+        list : [
+                {pName : "snack_11", price : 10000, size : "100cm"},
+                {pName : "pokerchip", price : 25000, size : "105cm"},
+                {pName : "oreo", price : 5000, size : "30cm"},
+                {pName : "candy", price : 30000, size : "5cm"}
+            ]   
+    }
+
+    , methods: { // 함수를 지정하는 부분이다.
+
+        fnAge : function(){
+   
+            this.grade = this.inGrade;
+
+        }
+            
+        
+    }
+
+    , created: function () { // 화면이 처음 실행될 때 나타나는 요소
+    
+
+	}
+});
+</script>

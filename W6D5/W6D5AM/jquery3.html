@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="/W6D5/js/jquery-3.6.4.min.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <input type="checkbox" name="lec" value="java"> <span>자바</span> <br>
+    <input type="checkbox" name="lec" value="db"> <span>데이터베이스</span> <br>
+    <input type="checkbox" name="lec" value="html"> <span>HTML</span> <br>
+    <input type="checkbox" name="lec" value="script"> <span>자바스크립트</span> <br>
+    <input type="text" value="haha"> <br>
+    <input type="password"> <br>
+    <input type="file"> <br>
+    <!--<button disabled >클릭</button> disabled : 사용 불가능하게 바꾼다-->
+
+    <button >클릭</button> <!--disabled : 사용 불가능하게 바꾼다-->
+        
+</body>
+</html>
+
+<script>
+
+    $(function(){
+        $("button").on("click", function(){
+            // console.log($(":checked").next()); // input으로 사용된 타입을 선택할 때 사용한다.
+          
+            // $(":checked").next().css("color", "red"); // 체크한 텍스트의 색을 변경한다.
+
+            console.log($(":text"));
+
+        });
+
+    });
+
+</script>

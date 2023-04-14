@@ -1,0 +1,140 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="/W6D5/W6D5PM/index.css">
+        <script src="js/jquery.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+        <style>
+            table, td, th {
+                border : 1px solid black;
+                font-size: 20px;
+                text-align: center;
+                border-collapse: collapse;
+                padding: 5px 20px;
+            }
+
+        </style>
+</head>
+ 
+<body>      
+    <div id="app">
+
+      <!--{{name}}  vue안의 값을 출력한다. ============================================================ -->
+
+      <!-- <h1 v-if="age >= 40">{{age}}</h1>  =======================================================================================
+        vue를 사용하여 if문을 사용할 때는 if문 앞에 v-를 붙여줘야 한다. -->
+            
+
+<!-- data에 있는 grade의 값이 조건에따라 바뀌게하는 예제 ====================================== -->
+      <h1 v-if="grade >= 90" style="color:red">A</h1> 
+      <h1 v-else-if="grade >=80" style="color:blue">B</h1> 
+      <h1 v-else-if="grade >= 70" style="color:yellow">C</h1> 
+      <h1 v-else-if="grade >= 60" style="color:green">D</h1> 
+      <h1 v-else style="color:gray">E</h1> 
+
+      <label>점수입력 : <input type="text" id="grade" v-model="inGrade"></label>
+
+      <button @click="fnAge()">클릭</button>   
+     <!--  vue에서 버튼을 사용할 때 @click(=v-click) 를 사용한다.
+        버튼을 누르면 methods의 fnAge의 함수가 실행된다.-->
+
+
+
+<!-- v-for문 map형태=========================================================================-->
+      <ul>
+        <li v-for="item in map">{{item}}</li> <!--map 값에 순차적으로 접근하여 출력한다. 
+                                                    첫번째 바퀴에는 pName 
+                                                    두번째 바퀴에는 price
+                                                    세번째 바퀴에는 size-->
+      </ul>
+
+
+<!-- v-for문 list형태=========================================================================-->
+      <!-- <ul v-for="item in list">
+        <li>{{item.pName}}</li> list안에 있는 map에 순차적으로 접근하여 출력한다.
+        <li>{{item.price}}</li>
+        <li>{{item.size}}</li>
+      </ul> -->
+
+
+      <!--list안에 있는 값들을 테이블의 형태에 맞게 순차적으로 접근하여 출력한다. -->
+      <table>
+        <tr> 
+            <th>no.</th>
+            <th>이름</th>
+            <th>가격</th>
+            <th>사이즈</th>
+        </tr>
+       
+      <!--  <tr v-for="(item, index) in list" >  index를 넣으면 순차적으로 접근하는 값들의 순서를 알 수 있다.
+            <td>{{index+1}}</td>
+            <td>{{item.pName}}</td>
+            <td>    //가격이 15000원 이상이면 파란색, 그렇지 않으면 빨간색으로 변경한다 
+                <span v-if="item.price >= 15000" style="color:blue"> 
+                    {{item.price}}</span> 
+   
+                    <span v-else style="color:red">{{item.price}}</span> 
+
+            </td> -->
+
+
+        <!-- 15000원 이상의 값만 나오게 한다.-->
+        <tr v-for="(item, index) in list" > 
+            <template v-if="item.price >= 15000">  <!-- <template> : -->
+                    <td>{{index+1}}</td>
+                    <td>{{item.pName}}</td>
+                    <td>{{item.price}}</td>
+                    <td>{{item.size}}</td>
+            </template>
+        </tr>
+
+      </table>
+    
+    </div> 
+   
+</body>
+</html>
+
+<script>
+    var app = new Vue({ 
+    el: '#app',  // 해당 아이디의 영역에서 입력되야 출력이된다
+
+    data: {     // data라는 맵에 넣기 때문에 변수타입을 정하지 않는다.
+                // 데이터 영역으로서 변수를 지정한다.
+                
+        name : "홍길동", //전역 변수로서 페이지 전체에 적용된다.
+        age : 30,
+        grade : 85 , 
+        inGrade : 0 , 
+        map : {pName : "snack_11", price : 15000, size : "10cm"}, 
+
+        list : [
+                {pName : "snack_11", price : 10000, size : "100cm"},
+                {pName : "pokerchip", price : 25000, size : "105cm"},
+                {pName : "oreo", price : 5000, size : "30cm"},
+                {pName : "candy", price : 30000, size : "5cm"}
+            ]   
+    }
+
+    , methods: { // 함수를 지정하는 부분이다.
+
+        fnAge : function(){
+            // console.log(this.name); // data안에 있는 변수에 접근 할 때는 this를 붙여준다.
+
+
+            //<label>점수입력 에 들어가는 값을
+            
+            // 점수입력칸에 점수를 입력하고 클릭을 누르면 점수에 맞게 등급이 바뀌게 한다.
+            this.grade = this.inGrade;
+ㅡㅡ
+        }
+            
+        
+    }
+
+    , created: function () { // 화면이 처음 실행될 때 나타나는 요소
+    
+
+	}
+});
+</script>

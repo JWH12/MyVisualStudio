@@ -1,0 +1,74 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="/W6D5/W6D5PM/index.css">
+        <script src="js/jquery.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> <!--cdn-->
+
+        <style>
+            table, td, th{
+                border : 1px solid #ccc;
+                font-size: 20px;
+                text-align: center;
+                border-collapse: collapse;
+                padding: 5px 20px;
+            }
+        </style>
+    </head>
+
+    <body>      
+        <div id="app">
+            <div class="table-list">
+                <table>                   
+                    <thead>
+                        <tr>                            
+                            <th scope="col">No.</th>
+                            <th scope="col">학번</th>
+                            <th scope="col">이름</th>
+                            <th scope="col">학과</th>
+                            <th scope="col">학년</th>
+                            <th scope="col">키</th>
+                            <th scope="col">몸무게</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr v-for="(item, index) in list" v-if="item.stu_dept == '컴퓨터정보'">                         
+                            <td>{{index+1}}</td> 
+                            <td>{{item.stu_no}}</td>
+                            <td>{{item.stu_name}}</td>
+                            <td>{{item.stu_dept}}</td>
+                            <td>{{item.stu_grade}}</td>
+                            <td>{{item.stu_height}}</td>
+                            <td>{{item.stu_weight}}</td>
+                             
+                        </tr>
+                        
+                    </tbody>                   
+                </table>
+            </div>
+        </div>      
+    </body>
+    </html>
+    <script>
+        var app = new Vue({ 
+        el: '#app',
+        data: {
+            seen: true
+            , list : []
+        }, methods: {
+                fnTest : function(){
+                    var self = this; // self 와 this는 같은 의미이다
+                    $.ajax({
+                        url:"js/MOCK_DATA2.json",
+                        dataType:"json",
+                        success:function(data) {
+                            self.list = data;
+                            
+                    }
+                });
+            }
+        }
+        , created: function () {
+            this.fnTest();
+        }
+    });
+    </script>

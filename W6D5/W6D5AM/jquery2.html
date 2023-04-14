@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="/W6D5/js/jquery-3.6.4.min.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul>
+        <!-- <li>자바</li>
+        <li><h3>데이터베이스</h3></li>
+        <li><span>HTML/CSS/JAVASCRIPT</span></li> -->
+
+        <li>자바</li>
+        <li>데이터베이스</li>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JAVASCRIPT</li>
+        <li>제이쿼리</li>
+        <li>JSP</li>
+        
+    </ul>
+    <button>클릭</button>
+    <div id="text"></div>
+</body>
+</html>
+
+<script>
+
+// 1번 ======================================================================================    
+    // $(function(){
+
+    //     var list = $("li");  // li태그 전체를 선택한다.
+
+    //     $("button").on("click", function(){  // 버튼을 눌렀을 때 list의 글들이 순차적으로 로그에 출력되게 한다,
+    //         for(var i=0; i<list.length; i++){
+    //             console.log(list[i]);
+    //         }
+    //     });
+
+    // });
+
+// 2번 ======================================================================================
+    // $(function(){
+
+    //     var list = $("li"); // li태그 전체를 선택한다.
+
+    //     $("button").on("click", function(){
+
+    //        $("#text").text("안녕하세요"); // id가 text인 div에 텍스트를 추가하는 방법
+
+    //     });
+
+    // });
+
+// 3번 ======================================================================================
+    // $(function(){
+
+    //     var list = $("li"); // li태그 전체를 선택한다.
+
+    //     $("button").on("click", function(){
+
+    //        $("#text").text("li태그는 현재" + list.length + "개 입니다."); 
+    //        // list안에 li태그의 개수를 파악할 수 있다.
+           
+    //     });
+
+    // });
+
+
+
+// 4번 ======================================================================================
+
+    // $(function(){
+
+    //     var list = $("li"); // li태그 전체를 선택한다.
+
+    //     $("button").on("click", function(){
+
+    //         // $("li:has(span)") // li태그 안에서 span태그를 찾는다.
+
+    //         // $("li:has(span)").text("span tag hi"); // li태그 안에서 span태그를 찾은 뒤 텍스트를 교채한다.
+
+    //         $("li:has(h3)").css("color","red") // 버튼을 눌렀을 떄 li태그 안에있는 h3태그의 텍스트 색상을 변경한다.
+    //     });
+
+    // });
+
+
+// 5번 ======================================================================================
+    
+$(function(){
+
+        $("button").on("click", function(){
+        
+            $("li:first").css("color","red") //
+
+        }); 
+        // eq : 선택한 요소에서 인덱스가 n인 요소
+        // gt : 인덱스 n보다 큰 애들
+        // lt : 인덱스 n보다 작은 애들
+        // odd, even : 인덱스 홀,짝 인 애들
+        // first, last : 첫번째, 마지막  
+
+
+    });
+
+</script>

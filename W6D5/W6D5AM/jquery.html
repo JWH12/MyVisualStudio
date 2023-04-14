@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- <script src="https://code.jquery.com/jquery-1.12.4.min.js"> </script> -->
+     <!-- cdn   -->
+    <!-- 단점 : 외부에 파일을 두기 때문에 인터넷연결이 끊길 시 연결이 안된다.  -->
+      
+    <script src="/W6D5/js/jquery-3.6.4.min.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery</title>
+
+</head>
+<body>
+    <div>testtest</div>
+
+    
+</body>
+</html>
+
+<script>
+    // jQuery(function() { //jQuery의 기본 문법이다.
+    // }); 
+
+
+    
+    $(function() { //jQuery의 기본 문법이며 $표시로 대체가 가능하다.(jQuery = $)
+        // $(선택자).한수()
+        $("div").on("click", function(){ // div를 클릭했을 때 뒤에 정의한 function을 실행시킨다는 뜻이다.
+            $("div").css("color", "blue"); //div를 다시 지정한다 / $(선택자).css("함수요소");
+        }) 
+    }); 
+
+</script>
+
+
+
+

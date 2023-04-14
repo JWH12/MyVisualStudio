@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="/W6D5/js/jquery-3.6.4.min.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+         table {
+             width:300px;      
+        }
+        table, td {
+            border:1px solid #ccc;
+            border-collapse: collapse;
+        }
+        td {
+            padding:10px;
+        }
+
+    </style>
+
+</head>
+<body>
+    <table>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+        </tr>
+        <tr>
+            <td>9</td>
+            <td>10</td>
+            <td>11</td>
+            <td>12</td>
+        </tr>
+        <tr>
+            <td>13</td>
+            <td>14</td>
+            <td>15</td>
+            <td>16</td>
+        </tr>
+        <tr>
+            <td>17</td>
+            <td>18</td>
+            <td>19</td>
+            <td>20</td>
+        </tr>
+    </table>
+
+    <button>클릭</button>
+
+
+   
+</body>
+</html>
+
+<script>
+    // 홀수줄은 글시크기를 키우고, 짝수 줄은 배경색 추가
+    $(function() {
+        $("button").on("click", function(){
+            $("tr:odd").css("backgroundColor", "#eee");
+            $("tr:even").css("fontSize", "30px");
+
+        });
+
+    });
+
+</script>

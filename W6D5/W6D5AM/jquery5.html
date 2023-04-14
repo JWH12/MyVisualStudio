@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="/W6D5/js/jquery-3.6.4.min.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="btn">클릭</button>
+    <button id="btn2">감소</button>
+    
+    <div id="box" style="width: 300px; height: 300px; background-color: aqua;"></div>
+
+    <div id="text"></div>
+
+</body>
+</html>
+
+<script>
+
+    $(function(){
+
+        $("#btn").on("click", function(){
+
+            var width = $("#box").width(); // id="box"에 width 값을 가져온다
+            var height = $("#box").height(); // id="box"에 height 값을 가져온다
+
+            $("#text").html("너비 : " + width + ", 높이 : " + height); 
+ 
+        }); 
+
+        
+        $("#btn2").on("click", function(){
+
+            var width = $("#box").width(); // id="box"에 width 값을 가져온다
+            var height = $("#box").height(); // id="box"에 height 값을 가져온다
+            
+            $("#box").width(width/2).height(height/2); // 버튼을 누를 때 마다 wiidth의 값과 height의 크기를 반으로 줄인다.
+            $("#text").html("너비 : " + (width/2) + ", 높이 : " + (height/2)); // 줄어든 box의 크기를 텍스트로 출력한다.
+ 
+        }); 
+    
+    });
+
+
+</script>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="/W6D5/js/jquery-3.6.4.min.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul id="list">
+
+        <li>자바</li>
+        <li>데이터베이스</li>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JAVASCRIPT</li>
+        <li>제이쿼리</li>
+        <li>JSP</li>
+        
+    </ul>
+    <button>클릭</button>
+    <div id="text"></div>
+    
+</body>
+</html>
+
+<script>
+    $(function(){
+        $("button").on("click", function(){
+
+            // $("#list").find("li"); // id="list" 밑에 있는 li태그들을 찾을 수 있다. 특정 요소 밑에있는 태그들을 찾을 떄 사용한다. 
+
+            // $("#list").find("li").eq(1); // id="list" 밑에 있는 li태그 중 인덱스 첫번째를 가져온다.
+
+            $("#list").find("li").eq(1).html("Data" + "<br>" + "Base"); 
+            // 메소드체이닝 : 메소드 뒤에 다른 메소드들을 연속으로 사용 할 수 있다..
+            // text가 아닌 html을 사용해야 태그가 실행된다.
+
+            console.log($("#list").find("li").eq(1).html());
+            // html 괄호에 아무런 데이터가 안들어가 있으면 getter역할을 한다.
+            // 반대로 괄호안에 데이터가 있으면 setter 역할을 한다.
+
+
+            $("#list").find("li")
+            .eq(1).html("Data" + "<br>" + "Base") // 첫번째 데이터를 변경한다
+            .end()   // .end() : eq(1)이 변경 된 뒤에 다시 접근이 가능하게 해준다. 
+            .eq(2).html("두번째거 변경"); // 두번째 데이터를 변경한다
+
+            // .end : 
+
+        })
+    })
+
+</script>
