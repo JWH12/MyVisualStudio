@@ -1,0 +1,64 @@
+<html>
+<head>
+    <link rel="stylesheet" href="index.css">
+    <script src="js/jquery.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    
+</head>
+
+<body>      
+    <div id="app">
+      <div><span>클릭 횟수 : {{cnt}} </span> 번 입니다.
+        <button @click="btn1()">클릭!</button></div>
+
+        <span id="test">버튼 이벤트 2</span>
+        <button @click="btn2()">클릭!</button>
+
+        <div> <!--텍스트를 입력 하면 출력이 되게한다-->
+            <input type="text" v-model="txt" @keyup.enter="btn3()"> <!--enter가 눌렸을 때 btn3와 같은 값을 실행하겠다.  -->
+            <button @click="btn3">추가</button>
+        </div>
+        <div>{{textAdd}}</div>
+
+    </div>      
+</body>
+</html>
+
+<script>
+    var app = new Vue({ 
+    el: '#app',
+    data: {
+        cnt : 0 ,
+        textAdd : "",
+        txt : ""
+
+
+    }, methods: {
+        btn1 (){
+            this.cnt++
+
+        },
+
+        btn2 (){
+            alert("안녕하세요");
+            document.getElementById("test").style.color="red";
+
+
+        },
+
+        btn3 (){ 
+            this.textAdd =  this.textAdd + this.txt; 
+            this.txt = ""; // 텍스트가 입력 한 뒤에 빈칸이 되게 한다
+
+        }
+          
+
+
+    }
+    , created: function () {
+
+
+	
+	}
+});
+</script>

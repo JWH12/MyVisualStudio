@@ -1,0 +1,130 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="/W6D5/W6D5PM/index.css">
+        <script src="js/jquery.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> <!--cdn-->
+
+        <style>
+            table, td, th{
+                border : 1px solid #ccc;
+                font-size: 20px;
+                text-align: center;
+                border-collapse: collapse;
+                padding: 5px 20px;
+            }
+        </style>
+    </head>
+
+    <body>      
+        <div id="app">
+            <div class="table-list">
+                <label>입력 : <input type="text" @keyup.enter="btn()">
+                <select id="seledtBox" v-model="selectItem" >
+                    <option id="0" value="">:: 전체 ::</option>
+                    <option id="1" value="기계">기계</option>
+                    <option id="2" value="전기전자">전기전자</option>
+                    <option id="3" value="컴퓨터정보">컴퓨터정보</option>
+                    <option id="4" value="ㅋㅋㅋ">ㅋㅋㅋ</option>
+                </select>
+                <button @click="btn">클릭</button></label>
+
+                <table>                   
+                    <thead>
+                        <tr> 
+                            <th scope="col"></th>                           
+                            <th scope="col">No.</th>
+                            <th scope="col">학번</th>
+                            <th scope="col">이름</th>
+                            <th scope="col">학과</th>
+                            <th scope="col">학년</th>
+                            <th scope="col">키</th>
+                            <th scope="col">몸무게</th>
+                           
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr v-for="(item, index) in list"> 
+                            <!-- 체크리스트 하나를 체크하고 클릭을 하면
+                                 변수로 설정한 checkList안에 클릭한 데이터가 저장된다.-->
+                            <td><input type="checkbox" 
+                                v-bind:value = "item.stu_no" v-model="checkList"></td>
+                            <td>{{index+1}}</td> 
+                            <td>{{item.stu_no}}</td>
+                            <td>{{item.stu_name}}</td>
+                            <td>{{item.stu_dept}}</td>
+                            <td>{{item.stu_grade}}</td>
+                            <td>{{item.stu_height}}</td>
+                            <td>{{item.stu_weight}}</td>
+                            <td ></td>
+                       </tr>
+                    </tbody>
+                                  
+                </table>
+                <button @click="del">삭제</button>
+                <button @click="input">추가</button>
+
+            </div>
+        </div>      
+    </body>
+    </html>
+
+    <script>
+        var app = new Vue({ 
+        el: '#app',
+        data: {
+            seen: true
+            , list : []
+            , selectItem : ""
+            , selectSh : ""
+            , deptList : [
+            {deptName : "기계", deptValue : "기계"},
+            {deptName : "전기전자", deptValue : "전기전자"},
+            {deptName : "컴퓨터정보", deptValue : "컴퓨터정보"},
+            {deptName : "ㅋㅋㅋ", deptValue : "ㅋㅋㅋ"}
+            ]
+            , checkList : [] //체크한 요소를 관리하기 위해서 변수선언을 해줘야 한다.
+
+
+        }, methods: {
+                fnTest : function(){
+                    var self = this; // self 와 this는 같은 의미이다
+                    $.ajax({
+                        url:"js/MOCK_DATA2.json",
+                        dataType:"json",
+                        success:function(data) {
+                            self.list = data;
+                            
+                    }
+                });
+            },
+            btn : function(){
+                
+                
+
+            },
+
+            del : function(){ //
+                for(var i=this.list.length-1; i>=0; i--){ // 1번 : 전체 리스트
+                    for(var j=0; j<this.checkList.length; j++){ // 2:  체크한 리스트
+                        if(this.list[i].stu_no == this.checkList[j]){ // 1번과 2번을 비교하여 학번이 겹치는게 있으면 삭제
+                            this.list.splice(i, 1);
+                            break;
+                        }
+                    }    
+                }
+                
+
+            },
+            
+            input : function(){
+
+                
+            }
+
+
+        }
+        , created: function () {
+            this.fnTest();
+        }
+    });
+    </script>

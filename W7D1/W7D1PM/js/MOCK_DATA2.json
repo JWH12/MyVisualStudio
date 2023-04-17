@@ -1,0 +1,15 @@
+[
+{"stu_no":"20153075 ","stu_name":"옥한빛","stu_dept":"기계","stu_grade":1,"stu_class":"C","stu_gender":"M","stu_height":179,"stu_weight":80}
+,{"stu_no":"20153088 ","stu_name":"이태연","stu_dept":"기계","stu_grade":1,"stu_class":"C","stu_gender":"F","stu_height":162,"stu_weight":50}
+,{"stu_no":"20143054 ","stu_name":"유가인","stu_dept":"기계","stu_grade":2,"stu_class":"C","stu_gender":"F","stu_height":154,"stu_weight":47}
+,{"stu_no":"20152088 ","stu_name":"조민우","stu_dept":"전기전자","stu_grade":1,"stu_class":"C","stu_gender":"M","stu_height":188,"stu_weight":90}
+,{"stu_no":"20142021 ","stu_name":"심수정","stu_dept":"전기전자","stu_grade":2,"stu_class":"A","stu_gender":"F","stu_height":168,"stu_weight":45}
+,{"stu_no":"20132003 ","stu_name":"박희철","stu_dept":"전기전자","stu_grade":3,"stu_class":"B","stu_gender":"M","stu_weight":63}
+,{"stu_no":"20151062 ","stu_name":"김인중","stu_dept":"컴퓨터정보","stu_grade":1,"stu_class":"B","stu_gender":"M","stu_height":168,"stu_weight":67}
+,{"stu_no":"20141007 ","stu_name":"진현무","stu_dept":"컴퓨터정보","stu_grade":2,"stu_class":"A","stu_gender":"M","stu_height":176,"stu_weight":64}
+,{"stu_no":"20131001 ","stu_name":"김종헌","stu_dept":"컴퓨터정보","stu_grade":3,"stu_class":"C","stu_gender":"M","stu_weight":72}
+,{"stu_no":"20131025 ","stu_name":"옥성우","stu_dept":"컴퓨터정보","stu_grade":3,"stu_class":"A","stu_gender":"F","stu_height":174,"stu_weight":63}
+,{"stu_no":"20201234 ","stu_name":"홍길동","stu_dept":"기계","stu_grade":1,"stu_class":"A","stu_gender":"M"}
+,{"stu_no":"20155678 ","stu_name":"길동이","stu_dept":"컴퓨터정보"}
+,{"stu_no":"12345678 ","stu_name":"유재석","stu_dept":"ㅋㅋㅋ"}
+]

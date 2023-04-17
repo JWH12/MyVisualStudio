@@ -1,0 +1,137 @@
+<html>
+<head>
+    <link rel="stylesheet" href="index.css">
+    <script src="js/jquery.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <style>
+        table, td, th{
+            border : 1px solid #ccc;
+            font-size: 20px;
+            text-align: center;
+            border-collapse: collapse;
+            padding : 5px 20px;
+        }
+    </style>
+</head>
+<body>      
+    <div id="app">
+        <div style="margin : 20px;">
+            <label>입력 : <input type="text" v-model="keyword"></label>
+            <select id="seledtBox" v-model="selectItem">
+                <option id="0" value="">:: 전체 ::</option>
+                <option id="1" value="기계">기계</option>
+                <option id="2" value="전기전자">전기전자</option>
+                <option id="3" value="컴퓨터정보">컴퓨터정보</option>
+                <option id="4" value="ㅋㅋㅋ">ㅋㅋㅋ</option>
+            </select>
+            <button @click="fnSearch()">클릭</button>
+        </div>
+        <div class="table-list">
+            <table>                   
+                <thead>
+                    <tr>            
+                        <th scope="col"></th>                
+                        <th scope="col">No.</th>
+                        <th scope="col">학번</th>
+                        <th scope="col">이름</th>
+                        <th scope="col">학과</th>
+                        <th scope="col">학년</th>
+                        <th scope="col">키</th>
+                        <th scope="col">몸무게</th>
+                        <th scope="col" v-if="addFlg"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr v-for="(item, index) in list" > 
+                            <td><input type="checkbox" v-bind:value = "item.stu_no" v-model="checkList"></td>                 
+                            <td>{{index + 1}}</td> 
+                            <td>{{item.stu_no}}</td>
+                            <td>{{item.stu_name}}</td>
+                            <td>{{item.stu_dept}}</td>     
+                            <td>{{item.stu_grade}}</td>     
+                            <td>{{item.stu_height}}</td>     
+                            <td>{{item.stu_weight}}</td>  
+                    </tr>  
+         <!-- 추가버튼을 눌렀을 시 테이블에 데이터를 추가하는 예제=============================================== -->        
+                    <tr v-if="addFlg"> <!-- <tr v-if="addFlg == true"> 와 같은 의미이다.--> 
+                        <td></td>  <!-- 체크박스 -->
+                        <td></td>  <!-- index 값 -->
+                        <td><input type="text" v-model="info.stu_no" size="10"></td>
+                        <td><input type="text" v-model="info.stu_name" size="5"></td>
+                        <td><input type="text" v-model="info.stu_dept" size="5"></td>     
+                        <td><input type="text" v-model="info.stu_grade" size="3"></td>     
+                        <td><input type="text" v-model="info.stu_height" size="3"></td>     
+                        <td><input type="text" v-model="info.stu_weight" size="2"></td>
+                        <td><button @click="fnAddMember()">추가</button></td>
+                    </tr>
+                                                        
+                </tbody>                   
+            </table>
+            <button style="margin-top : 10px;" @click="fnRemove()">삭제</button>
+            <button style="margin-top : 10px;" @click="fnAdd()">추가</button>
+        </div>
+        
+    </div>      
+</body>
+</html>
+<script>
+    var app = new Vue({ 
+    el: '#app',
+    data: {
+        seen: true
+        , list : []
+        , keyword : ""
+        , searchTxt : ""
+        , selectItem : ""      
+        , checkList : []
+        , addFlg : false  // 첫 화면에 추가한 텍스트 화면이 뜨지 않게 하기 위해 사용할 변수를 선언 한다.
+        , info : {} // info에 값을 넣기 위해서 변수를 선언한다.
+        
+    },
+     methods: {
+            fnTest : function(){
+                var self = this;
+                $.ajax({
+                    url:"js/MOCK_DATA2.json",
+                    dataType:"json",
+                    success:function(data) {
+                        self.list = data;
+                        
+                }
+            });          
+        }
+        , fnSearch : function(){
+            this.searchTxt = this.keyword;
+            console.log(this.info);
+            
+        }
+        , fnRemove : function(){
+            for(var i=this.list.length-1; i>=0; i--){
+                for(var j=0; j<this.checkList.length; j++){
+                    if(this.list[i].stu_no == this.checkList[j]){
+                        this.list.splice(i, 1);
+                        break;
+                    }
+                }
+            }
+        }
+        , fnAdd : function(){
+            this.addFlg = !this.addFlg; // 추가버튼을 두번 눌렀을 때 텍스트칸이 안보이게한다.
+        }
+        , fnAddMember : function(){
+            this.list.push(this.info); // info값을 list에 넣는다.
+            this.info = {stu_no : ""  // 값을 넣은 뒤 변수를 초기화 한다.
+                        , stu_name : ""
+                        , stu_dept : ""
+                        , stu_grade : "" 
+                        , stu_height : "" 
+                        , stu_weight : ""}
+            this.addFlg = false;       // 값을 추가하면 추가 텍스트간이 생성되지 않는다. 
+        }
+    }
+    , created: function () {
+		this.fnTest();
+
+	}
+});
+</script>
