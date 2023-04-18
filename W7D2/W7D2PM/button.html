@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="/W7D2/js/jquery-3.6.4.min.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+
+
+    </style>
+
+
+</head>
+
+<body>
+    
+</body>
+    <div>
+        <button id="btn1">숨기기</button>
+        <button id="btn2">보이기</button>
+        <button id="btn3">보이기 / 숨기기</button>
+        <button id="btn4">페이드인</button>
+        <button id="btn5">페이드아웃</button>
+        <button id="btn6">페이드아웃 / 페이드인</button>
+    </div>    
+
+    <div><img src="/W7D2/imgees/rt.jpg" id="img"></div>
+    
+</html>
+
+<script>
+
+    $(function(){
+        $("#btn1").on("click", function(){
+            $("#img").hide(1000);   // 버튼을 누르면 2초동안 요소를 숨긴다 
+
+
+        })
+
+        
+        $("#btn2").on("click", function(){
+            // $("#img").show("slow");   // 버튼을 누르면 요소기 천천히 보이게한다
+            $("#img").show("fast");   // 버튼을 누르면 요소기 빠르게 보이게한다
+
+        })
+
+
+        $("#btn3").on("click", function(){
+           $("#img").toggle("slow");   // 버튼을 누르면 요소를 보였다 숨겼다를 반복 할 수 있다.
+
+        })
+        
+
+        $("#btn4").on("click", function(){
+           $("#img").fadeIn(2000);   // 버튼을 누르면 해당 요소가 서서히 나타난다
+
+        })
+
+
+        $("#btn5").on("click", function(){
+           $("#img").fadeOut(2000);   // 버튼을 누르면 해당 요소가 서서히 사라진다
+
+        })
+
+        
+        $("#btn6").on("click", function(){
+           $("#img").fadeToggle(2000);   // 버튼을 누르면 페이드아웃과 페이드인을 반복 할 수 있다.
+
+        })
+    
+
+    });
+
+    
+
+</script>

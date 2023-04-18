@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="/W7D2/js/jquery-3.6.4.min.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body> <!-- li태그를 복사하여 ul태그 밑으로 붙여넣기하는 예제-->
+    <ul id="list">
+        <li>자바스크립트</li>
+        <li id="C">C언어</li>
+        <li>HTML/CSS/JAVASCRIPT</li>
+    </ul>
+    <button id="btn">클릭</button>
+
+</body>
+</html>
+
+<script>
+    $(function(){
+
+        //복사
+        // $("#btn").on("click", function(){
+        //     $("#C").clone().appendTo("#list"); //clone(): 특정 값을 복사 할 때 사용한다. / appendTo : 부모클래스 바로 밑에 값을 넣는다.
+
+        // });
+
+        //대체
+        $("#btn").on("click", function(){
+            $("#C").replaceAll("li"); // replaceAll() : 지정한 요소를 대체 할 때 사용된다.
+
+        });
+
+
+    });
+
+</script>

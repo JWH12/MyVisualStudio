@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <ul>
+        <li id="java">자바</li>
+        <li id="db">데이터베이스</li>
+        <li id="html">HTML</li>
+        <li id="css">CSS</li>
+        <li id="javascript">자바스크립트</li>
+        <li id="jquery"><span>제이쿼리</span></li>
+        <li id="vue">vue.js</li>
+        <li id="TT">노잼</li>
+    </ul>
+
+    <div><button id="btn1">siblings - 형제 요소</button></div>
+
+    <div><button id="btn2">next - 다음 형제 요소</button></div>
+
+    <div><button id="btn3">nextAll - 다음 모든 형제 요소</button></div>
+
+    <div><button id="btn4">nextUntil - 선택 요소 전까지</button></div>
+
+    <div><button id="btn5">prev - 이전 형제 요소</button></div>
+
+    <div><button id="btn6">prevAll - 이전 모든 형제 요소</button></div>
+
+    <div><button id="btn7">prevUntil - 선택 요소 전까지</button></div>
+
+    <div><button id="btn8">first - 처음</button></div>
+
+    <div><button id="btn9">last - 마지막</button></div>
+
+    <div><button id="btn10">eq - 인덱스(음수 가능, 뒤부터)</button></div>
+
+    <div><button id="btn11">filter - odd, even</button></div>
+
+    <div><button id="btn12">has - 가지고 있는거</button></div>
+
+    <div><button id="btn13">slice - 해당 인덱스보다 큰거</button></div>
+    
+</body>
+</html>
+
+<script>
+    $(function() {
+        $("#btn1").on("click", function() { // CSS기준 모든 형제 요소를 찾는다
+            $("#css").siblings().css("border", "2px solid red");	
+        });
+
+
+        $("#btn2").on("click", function() { // CSS기준 다음 형제 요소를 찾는다
+            $("#css").next().css("border", "2px solid red");	
+        });
+
+
+        $("#btn3").on("click", function() { // CSS기준 다음에 오는 모든 형제 요소를 찾는다
+            $("#css").nextAll().css("border", "2px solid red");	
+        });
+
+
+        $("#btn4").on("click", function() { // CSS와 vue.js사이에 있는 형제요소를 찾는다. 
+            $("#css").nextUntil("#vue").css("border", "2px solid red");	
+        });
+
+
+        $("#btn5").on("click", function() { // CSS 직전의 형제 요소를 찾는다
+            $("#css").prev().css("border", "2px solid red");	
+        });
+
+
+        $("#btn6").on("click", function() { // CSS 이전의 형제 요소들을 찾는다
+            $("#css").prevAll().css("border", "2px solid red");	
+        });
+
+
+        $("#btn7").on("click", function() { // CSS 이전부터 자바 사이의 형제 요소들을 찾는다.
+            $("#css").prevUntil("#java").css("border", "2px solid red");	
+        });
+
+
+        $("#btn8").on("click", function() { // li태그 기준으로 인덱스 첫번째 형제요소를 찾는다
+            $("li").first("").css("border", "2px solid red");	
+        });
+
+
+        $("#btn9").on("click", function() { // li태그 기준으로 인덱스 마지막 형제요소를 찾는다
+            $("li").last("").css("border", "2px solid red");	
+        });
+
+
+        $("#btn10").on("click", function() {
+            $("li").eq(2).css("border", "2px solid red");	
+        });
+
+
+        $("#btn11").on("click", function() { // 인덱스가 홀수번째에 있는 형제 요소들을 찾는다.
+            $("li").filter(":odd").css("border", "2px solid red");	
+        });
+
+
+        $("#btn12").on("click", function() { // li태그 중 span태그를 가진 형제요소를 찾는다
+            $("li").has("span").css("border", "2px solid red");	
+        });
+
+
+        $("#btn13").on("click", function() { // 인덱스 1보다 큰 형제요소들을 찾는다.
+            $("li").slice(1).css("border", "2px solid red");	
+        });
+    });
+</script>

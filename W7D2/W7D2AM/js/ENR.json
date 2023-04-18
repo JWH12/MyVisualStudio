@@ -1,0 +1,10 @@
+[
+    {"stu_no":"20153075 ","stu_name":"옥한빛","stu_dept":"기계","stu_grade":1,"avg":61}
+    ,{"stu_no":"20153088 ","stu_name":"이태연","stu_dept":"기계","stu_grade":1,"avg":69.5}
+    ,{"stu_no":"20143054 ","stu_name":"유가인","stu_dept":"기계","stu_grade":2,"avg":41}
+    ,{"stu_no":"20152088 ","stu_name":"조민우","stu_dept":"전기전자","stu_grade":1,"avg":45}
+    ,{"stu_no":"20132003 ","stu_name":"박희철","stu_dept":"전기전자","stu_grade":3,"avg":72}
+    ,{"stu_no":"20151062 ","stu_name":"김인중","stu_dept":"컴퓨터정보","stu_grade":1,"avg":81}
+    ,{"stu_no":"20131001 ","stu_name":"김종헌","stu_dept":"컴퓨터정보","stu_grade":3,"avg":73}
+    ,{"stu_no":"20131025 ","stu_name":"옥성우","stu_dept":"컴퓨터정보","stu_grade":3,"avg":70}
+]

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="/W7D2/js/jquery-3.6.4.min.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 300px;
+            height: 200px;
+            border: 3px solid red;
+            padding: 10px;
+            margin: 10px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <button id="btn">클릭</button>
+    <div class="box"><div id="text1"></div></div>
+    
+
+</body>
+
+</html>
+
+<script>
+    // height() : 요소의 크기 / innerHeight() : paddding 까지 포함한 크기
+    // outerHeight() : border 까지 포함한 크기 / outerHeight(true) : margin 까지 포함한 크기 
+
+    $(function(){
+
+        $("#btn").on("click", function(){
+
+            // var width = $(".box").width(); // id="box"에 width 값을 가져온다
+
+            // var width = $(".box").innerWidth();  //  paddding 까지 포함한 크기
+ 
+            // var width = $(".box").outerWidth();  // border 까지 포함한 크기
+
+            var width = $(".box").outerWidth(true);  // margin 까지 포함한 크기 
+
+
+            var height = $(".box").height(); // id="box"에 height 값을 가져온다
+
+            $("#text").html("너비 : " + width + ", 높이 : " + height); 
+ 
+        }); 
+     
+    });
+
+
+
+    $(function() {
+
+        $("#btn").on("click", function() {
+            
+            var str = "너비 : " + $(".box").width() + "px <br>";	
+            str += "높이 : " + $(".box").height() + "px <br>"
+            str += "높이 + padding : " + $(".box").innerHeight() + "px <br>"
+            str += "너비 + padding : " + $(".box").innerWidth() + "px <br>"
+            str += "높이 + border: " + $(".box").outerHeight() + "px <br>"
+            str += "너비 + border : " + $(".box").outerWidth() + "px <br>"
+            str += "높이 + margin : " + $(".box").outerHeight(true) + "px <br>"
+            str += "너비 + margin : " + $(".box").outerWidth(true) + "px <br>"
+
+            $("#text1").html(str);
+        });
+    });
+
+
+</script>

@@ -1,0 +1,98 @@
+<html>
+<head>
+    <link rel="stylesheet" href="/W6D5/W6D5PM/index.css">
+    <script src="js/jquery.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <style>
+        table, td, th{
+            border : 1px solid #ccc;
+            font-size: 20px;
+            text-align: center;
+            border-collapse: collapse;
+            padding : 5px 20px;
+        }
+        .font_color1{
+            color: red;
+
+        }
+
+        .font_color2{
+            color: blue;
+
+        }
+
+        .backgroundc1{
+            background-color: gray;
+        }
+
+        .backgroundc2{
+            background-color: rgb(170, 164, 218);
+        }
+    </style>
+</head>
+
+<body>      
+    <div id="app">
+        <div class="table-list">
+            <table>                   
+                <thead>
+                    <tr>            
+                        <th scope="col"></th>                
+                        <th scope="col">No.</th>
+                        <th scope="col">학번</th>
+                        <th scope="col">이름</th>
+                        <th scope="col">학과</th>
+                        <th scope="col">학년</th>
+                        <th scope="col">키</th>
+                        <th scope="col">몸무게</th>
+                      
+                    </tr>
+                </thead>
+                <tbody> <!-- stu_grade가 1이면 font_color1을 아니면 font_color2 클래스를 실행시킨다. -->
+                    <tr v-for="(item, index) in list" 
+                    v-bind:class="[item.stu_grade == 1? 'font_color1' : 'font_color2']">   
+                    <!-- v-bind:class에 대괄호를 쓰는 이유는 ,를 통해서 여러 조건을 줄 수 있기 때문이다. -->                   
+                        <td><input type="checkbox" v-bind:value = "item.stu_no" v-model="checkList"></td>                 
+                        <td>{{index + 1}}</td> 
+                        <td>{{item.stu_no}}</td>
+                        <td>{{item.stu_name}}</td>
+                        <td>{{item.stu_dept}}</td>     
+                        <td>{{item.stu_grade}}</td>     
+                        <td>{{item.stu_height}}</td>     
+                        <td>{{item.stu_weight}}</td>  
+                    </tr>                                                                  
+                </tbody>                  
+            </table>
+        </div>
+    </div>      
+</body>
+
+</html>
+
+<script>
+    var app = new Vue({ 
+    el: '#app',
+    data: {
+        list : [],
+        checkList : []
+  
+    }, 
+    methods: {
+        fnTest : function(){
+            var self = this;
+            $.ajax({
+                url:"js/MOCK_DATA2.json",
+                dataType:"json",
+                success:function(data) {
+                    self.list = data;                  
+                }
+            });  
+        }
+    }
+
+    , created: function () {
+        var self = this;
+        self.fnTest();
+	}
+});
+</script>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="/W7D2/js/jquery-3.6.4.min.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        li{
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+    
+        .test{
+            border: 2px solid red;
+        }
+
+    </style>
+
+</head>
+
+<body> <!-- -->
+    <div>
+        <ul id="list">
+            <li>자바스크립트</li>
+            <li id="C">
+                <span id="sp">C언어</span>
+            </li>
+            <li>HTML/CSS/JAVASCRIPT</li>
+        </ul>
+    </div>
+    <button id="btn">클릭</button>
+
+</body>
+</html>
+
+<script>
+    $(function(){
+
+        $("#btn").on("click", function(){
+
+            // $("li").add("div").css("border", "1px solid blue");     // li태그를 기준으로 기존에 있던 div태그에 속성을 준다
+            
+            $("li").each(function(){        // each(function(){}) : li태그에 순차적으로 접근하면서 함수를 실행시킨다. 
+                                            // for문 대신 사용이 가능하다
+                                        
+                                        
+                // this를 사용한다.
+                
+                // $(this).css("border", "1px solid red");   // $(this) : li태그에 순차적으로 접근하면서 속성을 준다.
+
+                $(this).toggleClass("test");    // toggleClass : 해당 요소를 클릭했을 때 껐다 켰다를 반복 할 때 사용한다.
+            
+            });  
+
+        });
+    });
+
+</script>

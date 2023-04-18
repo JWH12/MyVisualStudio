@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="/W7D2/js/jquery-3.6.4.min.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+
+
+    </style>
+
+
+</head>
+
+<body>
+    
+</body>
+  <div>
+      <button id="btn7">페이드(투명도)</button>
+      <button id="btn8">페이드(투명도)</button>
+      <button id="btn9">딜레이</button>
+      <button id="btn10">슬라이드 다운</button>
+      <button id="btn11">슬라이드 업</button>
+      <button id="btn12">슬라이드 업 / 슬라이드 다운</button>
+      <button id="btn13">정지</button>
+      <button id="btn14">중지</button>
+    </div>
+
+
+   <div><img src="/W7D2/imgees/rt.jpg" id="img"></div>
+  
+</html>
+
+<script>
+
+    $(function(){
+        $("#btn7").on("click", function(){
+           $("#img").fadeTo(2000, 0.1);   // 버튼을 누르면 지정한 투명도까지 변경된다
+
+        })
+
+
+        $("#btn8").on("click", function(){
+           $("#img").fadeTo(2000, 0.5);   // 버튼을 누르면 지정한 투명도까지 변경된다
+
+        })
+
+
+        $("#btn9").on("click", function(){
+           $("#img").fadeOut(1000).delay(1000).fadeIn(1000);  
+           // 버튼을 누르면 1초동안 페이드아웃 후 1초 후 자동으로 페이드인이 된다. 
+
+        })
+
+
+        $("#btn10").on("click", function(){
+           $("#img").slideDown(1000);   // 버튼을 누르면 슬라이드 다운이 된다
+     
+
+        })
+
+
+        
+        $("#btn11").on("click", function(){
+           $("#img").slideUp(1000);   // 버튼을 누르면 슬라이드 업이 된다
+     
+
+        })
+
+
+        $("#btn12").on("click", function(){
+           $("#img").slideToggle(1000);  // 버튼을 누르면 슬라이드 다운과 업이 된다
+          
+
+        })
+
+
+        $("#btn13").on("click", function(){
+           $("#img").stop();  // 버튼을 누르면 정지된다
+          
+
+        })
+
+
+        $("#btn14").on("click", function(){
+           $("#img").finish();  // 버튼을 누르면 중지된다
+          
+
+        })
+
+    });
+
+    
+
+</script>
